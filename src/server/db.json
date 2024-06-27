@@ -1,9 +1,0 @@
-{
-    "usuarios": [
-        {
-            "id":"0",
-            "nombre":"Pepe",
-            "clave":"abcd"
-        }
-    ]
-}
