@@ -1,0 +1,51 @@
+{
+  "usuarios": [
+    {
+      "id": "0",
+      "nombre": "Pepe",
+      "clave": "abcd"
+    },
+    {
+      "id": "d120",
+      "nombre": "Alejandra",
+      "clave": "1234"
+    },
+    {
+      "id": "d283",
+      "nombre": "Jeanca",
+      "clave": "das"
+    }
+  ],
+  "libros": [
+    {
+      "titulo": "The Baby-Sitters Club",
+      "autor": "Ann M. Martin",
+      "usuarioID": "0",
+      "cantidad-disponible": 2,
+      "tipo": "General",
+      "estado": "Venta",
+      "descripcion": "",
+      "id": "19f7"
+    },
+    {
+      "titulo": "The Baby-Sitters Club de otro usuario",
+      "autor": "Ann M. Martin",
+      "usuarioID": "1",
+      "cantidad-disponible": 2,
+      "tipo": "General",
+      "estado": "Venta",
+      "descripcion": "",
+      "id": "dcfc"
+    },
+    {
+      "titulo": "The Baby-Sitters Club de otro usuario",
+      "autor": "Ann M. Martin",
+      "usuarioID": "1",
+      "cantidad-disponible": 12,
+      "tipo": "General",
+      "estado": "Venta",
+      "descripcion": "",
+      "id": "5460"
+    }
+  ]
+}
