@@ -1,12 +1,14 @@
+import { BrowserRouter } from 'react-router-dom'
 import './App.css'
-import InicioSesion from './components/InicioSesion'
-
+import PageRoutes from './routes/PageRoutes'
 function App() {
  
 
   return (
     <>
-   <InicioSesion/>
+    <BrowserRouter>
+    <PageRoutes/>
+    </BrowserRouter>
     </>
   )
 }

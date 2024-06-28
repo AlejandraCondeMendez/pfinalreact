@@ -1,8 +1,8 @@
-import Boton from "./Boton"
-import Input from "./Input"
+import Boton from "../components/Boton"
+import Input from "../components/Input"
 import { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { getData } from "../metodos"
+import { getData } from "../services/fetch"
 
 
 const InicioSesion =()=>{
@@ -30,11 +30,7 @@ const InicioSesion =()=>{
         if(datos.find(usuarios=>userI===usuarios.nombre && passI===usuarios.clave)){
             irPagPrinci()
         }
-        // datos.forEach(usuarios=>{
-        //     if (userI === usuarios.nombre && passI === usuarios.clave) {
-        //         irPagPrinci()
-        //     }
-        // })
+     
     }
     const irCreate =()=>{
         navigate("/")
