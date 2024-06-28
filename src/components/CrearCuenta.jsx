@@ -8,8 +8,8 @@ import { postData } from "../metodos"
 const CrearCuenta=()=>{ //useState en los imputs para poder obtener lo que esta escrito de una fomra actualizada (para tener el input de una forma actualizada cada vez que se escribe (alejandra23-cada letra se actualiza)
     const [nombre,setNombre]=useState()
     const [contra,setContra]=useState()
-    const navigate = useNavigate()
-    const userReg = useRef('')
+    const navigate = useNavigate() //navegar entre rutas
+    const userReg = useRef('') //validar vacío del input
     const passReg = useRef('')
 
     const validarInputR=async()=>{

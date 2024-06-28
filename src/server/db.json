@@ -14,8 +14,14 @@
       "id": "d283",
       "nombre": "Jeanca",
       "clave": "das"
+    },
+    {
+      "id": "4816",
+      "nombre": "12",
+      "clave": "12"
     }
   ],
+
   "libros": [
     {
       "titulo": "The Baby-Sitters Club",
@@ -25,27 +31,8 @@
       "tipo": "General",
       "estado": "Venta",
       "descripcion": "",
-      "id": "19f7"
-    },
-    {
-      "titulo": "The Baby-Sitters Club de otro usuario",
-      "autor": "Ann M. Martin",
-      "usuarioID": "1",
-      "cantidad-disponible": 2,
-      "tipo": "General",
-      "estado": "Venta",
-      "descripcion": "",
-      "id": "dcfc"
-    },
-    {
-      "titulo": "The Baby-Sitters Club de otro usuario",
-      "autor": "Ann M. Martin",
-      "usuarioID": "1",
-      "cantidad-disponible": 12,
-      "tipo": "General",
-      "estado": "Venta",
-      "descripcion": "",
-      "id": "5460"
+      "id": "19f7",
+      "direccion": "Santa Ana, San José"
     }
   ]
 }

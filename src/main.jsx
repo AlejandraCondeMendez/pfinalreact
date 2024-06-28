@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import PagPrincipal from './components/PagPrincipal.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path:"/iniciarsesion",
     element: <InicioSesion/>
+  }
+  ,{
+    path: "/paginaprincipal",
+    element: <PagPrincipal/>
   }
 ])
 
