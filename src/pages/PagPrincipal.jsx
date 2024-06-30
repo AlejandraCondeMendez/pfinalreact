@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+import Opciones from "../components/Opciones"
 import CardBook from "../components/CardBook"
 import Input from "../components/Input"
 import HamburgerMenu from "../components/HamburgerMenu"
@@ -16,12 +17,7 @@ const PagPrincipal = () => {
                 <HamburgerMenu />
             </div>
             <h1 className="text-center">¡Welcome! Start to read now</h1>
-            <select className="text-center d-flex justify-content-center mx-auto">
-                <option>Categorías de la biblioteca</option>
-                <option>General</option>
-                <option>Libros en inglés</option>
-                <option>Libros universitarios</option>
-            </select>
+            <Opciones titulo={"Categorías de la biblioteca"}/>
 
             <div className="d-flex flex-row gap-3 mt-5 mb-5">
                 <p>Libros disponibles para venta</p>

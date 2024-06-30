@@ -1,8 +1,9 @@
-const Opciones = ({clase}) => {
+/* eslint-disable react/prop-types */
+const Opciones = ({clase, titulo}) => {
     return (
         <>
             <select className={clase}>
-                <option>Categorías</option>
+                <option>{titulo}</option>
                 <option>General</option>
                 <option>Libros en inglés</option>
                 <option>Libros universitarios</option>

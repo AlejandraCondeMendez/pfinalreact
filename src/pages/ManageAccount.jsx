@@ -1,6 +1,5 @@
 import { useState } from "react"
 import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import Navbar from "../components/Navbar"
 import ListaLibros from "../components/ListaLibros"
 import ModalLibro from "../components/ModalLibro";
@@ -22,7 +21,7 @@ const ManageAccount = () => { //CRUD
                 show={modalShow}
                 onHide={() => setModalShow(false)}
             />
-
+            
         </>
     )
 }
