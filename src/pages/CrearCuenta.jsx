@@ -2,7 +2,7 @@ import Boton from "../components/Boton"
 import Input from "../components/Input"
 import { useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { postData } from "../services/fetch"
+import { getData, postData } from "../services/fetch"
 
 
 const CrearCuenta=()=>{ //useState en los imputs para poder obtener lo que esta escrito de una fomra actualizada (para tener el input de una forma actualizada cada vez que se escribe (alejandra23-cada letra se actualiza)
@@ -20,9 +20,16 @@ const CrearCuenta=()=>{ //useState en los imputs para poder obtener lo que esta 
         let cuenta = {
             nombre: nombre,
             clave: contra
-        }
-        await postCuenta(cuenta,"usuarios") 
+        } 
+        let datos = await getData("usuarios", "") //ocupamos todos los datos
+        if(datos.find(usuarios=>nombre===usuarios.nombre)){ //find va abuscar dentro de datos y va a iterar (nombre viene del estado-input y usuarios.nombre es de la API)
+            alert("usuario ya existe")
+            return
+        } else {
+        await postCuenta(cuenta,"usuarios")}
     }
+
+    //Navegaciones entre páginas
     const irInicio=()=>{
         navigate ("/iniciarsesion")
     }

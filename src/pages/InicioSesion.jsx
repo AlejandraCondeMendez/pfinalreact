@@ -33,7 +33,7 @@ const InicioSesion =()=>{
      
     }
     const irCreate =()=>{
-        navigate("/")
+        navigate("/crearcuenta")
     }
 
     const irPagPrinci=()=>{
