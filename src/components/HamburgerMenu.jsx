@@ -16,10 +16,8 @@ const HamburgerMenu = () => {
         <div className="bar3"></div>
       </div>
       <div className={`menu-content ${isOpen ? 'show' : ''}`}>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a className='text-nowrap' href="#home">My account</a>
+        <a className='text-nowrap' href="#services">Add a new book</a>
       </div>
     </div>
     </>

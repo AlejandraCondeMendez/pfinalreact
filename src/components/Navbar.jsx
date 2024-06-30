@@ -6,12 +6,13 @@ const Navbar=()=>{
         navigate("/")
     }
 
+
     return(
         <>
 <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">
-      Pag information
+    <a onClick={()=>{navigate('/paginaprincipal')}} className="navbar-brand" href="#">
+      Home
     </a>
     <button
       className="navbar-toggler"
@@ -27,12 +28,16 @@ const Navbar=()=>{
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">
-            Home
+          <a onClick={()=>{navigate('/acercadenosotros')}} className="nav-link active" aria-current="page" href="#">
+            About us
+          </a>
+        </li>
+        <li className="nav-item">
+          <a onClick={()=>{navigate('/micuenta')}} className="nav-link active" aria-current="page" href="#">
+            My account
           </a>
         </li>
         </ul>
-
         <button onClick={irInicio} className="btn btn-outline-success" type="submit">
           Log out
         </button>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, imagen='https://www.marinschools.org/cms/lib/CA01001323/Centricity/Domain/187/Multiple_Content_Areas.png'})=>{
     
     return(

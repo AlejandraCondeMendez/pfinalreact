@@ -1,13 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import InicioSesion from './pages/InicioSesion.jsx'
-import CrearCuenta from './pages/CrearCuenta.jsx'
 import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import PagPrincipal from './pages/PagPrincipal.jsx'
 import App from './App.jsx'
 
 // const router = createBrowserRouter([
