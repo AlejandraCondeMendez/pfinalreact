@@ -1,16 +1,19 @@
-const CardBook=()=>{
+const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, imagen='https://www.marinschools.org/cms/lib/CA01001323/Centricity/Domain/187/Multiple_Content_Areas.png'})=>{
+    
     return(
-        <div className="card" style={{ width: "18rem" }}>
-  <img src="..." className="card-img-top" alt="..." />
+    <div className="card" style={{ width: "18rem" }}>
+    <h5 className="card-title">Libro: {titulo}</h5>
+    <p className="text-muted">Usuario: {subidopor}</p>
+  <img src={imagen} className="card-img-top" alt="..." />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
+    
+    <p>Autor: {autor}</p>
+    <p>Disponibles: {cantidad}</p>
+    <p>Categoría: {categoria}</p>
+    <p>Estado: {estado}</p>
     <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      Ubicación: {ubicacion}
     </p>
-    <a href="#" className="btn btn-primary">
-      Go somewhere
-    </a>
   </div>
 </div>
     )
