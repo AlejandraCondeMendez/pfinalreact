@@ -46,10 +46,10 @@
       "titulo": "The Baby-Sitters Club",
       "autor": "Ann M. Martin",
       "usuarioID": "0",
-      "cantidad-disponible": 2,
+      "cantidad": 2,
       "tipo": "General",
       "estado": "Venta",
-      "subido-por": "angie23",
+      "subidopor": "angie23",
       "id": "19f7",
       "direccion": "Santa Ana, San José"
     }
