@@ -1,8 +1,8 @@
-const Estado = () => {
+const Estado = ({clase}) => {
     return (
         <>
-            <select className="text-center d-flex justify-content-center mx-auto">
-                <option>Categorías de la biblioteca</option>
+            <select className={clase}>
+                <option>Opciones</option>
                 <option>Venta</option>
                 <option>Intercambio</option>
                 <option>Ambos</option>

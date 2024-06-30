@@ -5,24 +5,23 @@ import Navbar from "../components/Navbar"
 import ListaLibros from "../components/ListaLibros"
 import ModalLibro from "../components/ModalLibro";
 
-const ManageAccount =()=>{ //CRUD
+const ManageAccount = () => { //CRUD
     const [modalShow, setModalShow] = useState(false);
     const [libros, setLibros] = useState([])
 
 
-    return(
+    return (
         <>
-        <Navbar/>
-        <h1>My account</h1>
-        <ListaLibros cardLibro={libros}/>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
-      <ModalLibro
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-
+            <Navbar />
+            <h1>My account</h1>
+            <ListaLibros cardLibro={libros} />
+            <Button variant="primary" onClick={() => setModalShow(true)}>
+                Add a new book
+            </Button>
+            <ModalLibro
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
 
         </>
     )

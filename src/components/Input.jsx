@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-const Input = ({tipo, nombre, refVali, cambio, valor})=>{
+const Input = ({tipo, nombre, refVali, cambio, valor, clase})=>{
     return(
         <>
-        <input type={tipo} placeholder={nombre} ref={refVali} onChange={cambio} value={valor}></input>
+        <input type={tipo} placeholder={nombre} ref={refVali} onChange={cambio} value={valor} className={clase}></input>
         </>
     )
 }
