@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 //componente que se va a utilizar en el Manage account y pagprincipal
+//por cada iterar vamos un componente cardbook(libro)
 import CardBook from "./CardBook"
 
 const ListaLibros =({cardLibro})=>{//estructura

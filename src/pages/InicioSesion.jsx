@@ -26,8 +26,11 @@ const InicioSesion =()=>{
         if (!userI && !passI) {
             alert ("Por favor llene los campos vacíos")
             return
-        } 
-        if(datos.find(usuarios=>userI===usuarios.nombre && passI===usuarios.clave)){
+        }
+        const valiUsuarios = datos.find(usuarios=>userI===usuarios.nombre && passI===usuarios.clave)
+        if(valiUsuarios){
+            localStorage.setItem("localID", valiUsuarios.id)//es para tener el ID sel usuario que ha iniciado sesión (insertar)
+            localStorage.setItem("localUser", valiUsuarios.nombre)//id y usuarios vienen de la API
             irPagPrinci()
         }
      
