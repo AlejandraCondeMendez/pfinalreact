@@ -48,39 +48,6 @@
   ],
   "libros": [
     {
-      "titulo": "The Baby-Sitters Club",
-      "autor": "Ann M. Martin",
-      "usuarioID": "0",
-      "cantidad": 2,
-      "tipo": "General",
-      "estado": "Venta",
-      "subidopor": "angie23",
-      "id": "19f7",
-      "direccion": "Santa Ana, San José"
-    },
-    {
-      "id": "7c35",
-      "titulo": "",
-      "autor": "",
-      "usuarioID": "93c8",
-      "cantidad": "",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "angie23",
-      "direccion": ""
-    },
-    {
-      "id": "e878",
-      "titulo": "adds",
-      "autor": "dasd",
-      "usuarioID": "93c8",
-      "cantidad": "dadas",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "angie23",
-      "direccion": "asdasd"
-    },
-    {
       "id": "b06d",
       "titulo": "adds",
       "autor": "dasd",

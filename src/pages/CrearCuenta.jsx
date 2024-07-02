@@ -21,12 +21,12 @@ const CrearCuenta=()=>{ //useState en los imputs para poder obtener lo que esta 
             nombre: nombre,
             clave: contra
         } 
-        let datos = await getData("usuarios", "") //ocupamos todos los datos
+        let datos = await getData("usuarios", "") //ocupamos todos los datos del endpoint usuarios
         if(datos.find(usuarios=>nombre===usuarios.nombre)){ //find va abuscar dentro de datos y va a iterar (nombre viene del estado-input y usuarios.nombre es de la API)
             alert("usuario ya existe")
             return
         } else {
-        await postCuenta(cuenta,"usuarios")}
+        await postCuenta(cuenta,"usuarios")} //objeto y endpoint
     }
 
     //Navegaciones entre páginas

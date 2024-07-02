@@ -18,15 +18,18 @@ const ManageAccount = () => { //CRUD
         }
         librosUser()
     },[])
-
-
+    
+        const deleteLibro = async(id) =>{
+            await deleteData("libros",id)
+            
+        }
     
     return (
         <>
             <Navbar />
             <h1>My account</h1>
 
-            <ListaLibros cardLibro={libros} btnEditar={""} btnEliminar={""} />
+            <ListaLibros cardLibro={libros} btnEditar={""} btnEliminar={deleteLibro()} />
 
             <Button variant="primary" onClick={() => setModalShow(true)}>
                 Add a new book
