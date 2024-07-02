@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, imagen='https://www.marinschools.org/cms/lib/CA01001323/Centricity/Domain/187/Multiple_Content_Areas.png'})=>{
+const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, imagen='https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png'})=>{
     
     return(
     <div className="card" style={{ width: "18rem" }}>

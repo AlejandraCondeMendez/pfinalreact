@@ -48,9 +48,11 @@ const InicioSesion =()=>{
 
         <>
         <h1>Welcome to</h1>
-        <Input tipo={"text"} nombre={"usuario"} refVali={userInicio}/>
-        <Input tipo={"password"} nombre={"password"} refVali={passInicio}/>
+        <div className="position-absolute top-50 start-50 translate-middle">
+        <Input tipo={"text"} nombre={"usuario"} refVali={userInicio} signo={"@"}/>
+        <Input tipo={"password"} nombre={"password"} refVali={passInicio} signo={"*"}/>
         <Boton tipo={"button"} nombre={"Log in"} evento={validarInput}/>
+        </div>
 
         <a onClick={irCreate}>Creat an account</a>
         </>

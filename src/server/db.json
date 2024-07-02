@@ -39,6 +39,11 @@
       "id": "b656",
       "nombre": "angie23",
       "clave": "123"
+    },
+    {
+      "id": "d0f8",
+      "nombre": "ale23",
+      "clave": "111"
     }
   ],
   "libros": [
@@ -107,6 +112,28 @@
       "estado": "",
       "subidopor": "angie23",
       "direccion": "asdasd"
+    },
+    {
+      "id": "3d57",
+      "titulo": "sdasd",
+      "autor": "dsad",
+      "usuarioID": "93c8",
+      "cantidad": "sadasd",
+      "tipo": "",
+      "estado": "",
+      "subidopor": "angie23",
+      "direccion": "sadasd"
+    },
+    {
+      "id": "a7b4",
+      "titulo": "BLAA",
+      "autor": "BLAAA",
+      "usuarioID": "d0f8",
+      "cantidad": "BLAAA",
+      "tipo": "",
+      "estado": "",
+      "subidopor": "ale23",
+      "direccion": "BLAAA"
     }
   ]
 }

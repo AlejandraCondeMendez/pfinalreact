@@ -62,3 +62,10 @@
 .hamburgerMover{
   margin-right: 85vw;
 }
+
+
+.input-circular{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}

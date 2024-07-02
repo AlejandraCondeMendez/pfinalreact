@@ -27,7 +27,7 @@ async function getData(endpoint,id="") {
     try {
         const response = await fetch(urlAPI+endpoint+"/"+id)
         const data = await response.json()
-        return data || []
+        return data
     } catch (error) {
         console.log(error);
         return null 
