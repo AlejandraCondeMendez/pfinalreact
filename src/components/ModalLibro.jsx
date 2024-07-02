@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Input from './Input';
+import InputPP from './InputPP';
 import Opciones from './Opciones';
 import Estado from './Estado';
 import { postData } from '../services/fetch';
@@ -65,12 +65,12 @@ const ModalLibro = (props) => {
           <Modal.Body>
             <h4>Books information</h4>
             <div className='d-flex flex-column mx-auto justify-content-center align-items-center'>
-              <Input tipo={"text"} nombre={"Titulo"} clase={"w-25 mb-3 p-1"} refVali={tituloR} valor={tituloE} cambio={(e)=>setTitulo(e.target.value)}/>
-              <Input tipo={"text"} nombre={"Autor"} clase={"w-25 mb-3 p-1"} refVali={autorR} valor={autorE} cambio={(e)=>setAutor(e.target.value)} />
-              <Input tipo={"text"} nombre={"Disponile"} clase={"w-25 mb-3 p-1"} refVali={disponibleR} valor={dispoE} cambio={(e)=>setDispo(e.target.value)} />
+            <InputPP tipo={"text"} nombre={"Titulo"} clase={"w-25 mb-3 p-1"} refVali={tituloR} valor={tituloE} cambio={(e)=>setTitulo(e.target.value)}/>
+              <InputPP tipo={"text"} nombre={"Autor"} clase={"w-25 mb-3 p-1"} refVali={autorR} valor={autorE} cambio={(e)=>setAutor(e.target.value)} />
+              <InputPP tipo={"text"} nombre={"Disponile"} clase={"w-25 mb-3 p-1"} refVali={disponibleR} valor={dispoE} cambio={(e)=>setDispo(e.target.value)} />
               <Estado clase={"text-center d-flex justify-content-center mx-auto mb-3 p-1"}/>
               <Opciones clase={"text-center d-flex justify-content-center mx-auto mb-3 p-1"} titulo={"Categorías"}/>
-              <Input tipo={"text"} nombre={"Ubicación"} clase={"w-25 mb-3 p-1"} refVali={ubicacionR} valor={ubicaE} cambio={(e)=>setUbica(e.target.value)}/>
+              <InputPP tipo={"text"} nombre={"Ubicación"} clase={"w-25 mb-3 p-1"} refVali={ubicacionR} valor={ubicaE} cambio={(e)=>setUbica(e.target.value)}/>
             </div>
           </Modal.Body>
           <Modal.Footer>

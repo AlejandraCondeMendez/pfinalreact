@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
-const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, imagen='https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png'})=>{
+import Boton from "./Boton"
+const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, btnEliminar,btnEditar, imagen='https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png'})=>{
     
     return(
     <div className="card" style={{ width: "18rem" }}>
@@ -16,8 +17,10 @@ const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopo
     <p className="card-text">
       Ubicación: {ubicacion}
     </p>
+    <Boton evento={btnEliminar} tipo={"button"} nombre={"Eliminar"} className={"btn btn-danger p-2"}/>
+    <Boton evento={btnEditar} tipo={"button"} nombre={"Editar"} className={"btn btn-warning  p-2"}/>
+    </div>
   </div>
-</div>
     )
 }
 export default CardBook

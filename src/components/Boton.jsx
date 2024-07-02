@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-const Boton=({evento, nombre, tipo})=>{
+const Boton=({evento, nombre, tipo,className})=>{
     return(
         <>
-        <button type={tipo} onClick={evento}>{nombre}</button>
+        <button className={className} type={tipo} onClick={evento}>{nombre}</button>
         </>
     )
 }

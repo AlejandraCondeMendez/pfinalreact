@@ -30,6 +30,7 @@ const CrearCuenta=()=>{ //useState en los imputs para poder obtener lo que esta 
     }
 
     //Navegaciones entre páginas
+    
     const irInicio=()=>{
         navigate ("/iniciarsesion")
     }

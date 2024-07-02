@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar"
 import Opciones from "../components/Opciones"
-import CardBook from "../components/CardBook"
 import InputPP from "../components/InputPP"
 import HamburgerMenu from "../components/HamburgerMenu"
 import InfoGeneral from "../components/InfoGeneral"
@@ -39,12 +38,11 @@ const PagPrincipal = () => {
                 <InputPP tipo={"number"} valor={0} />
 
             </div>
-            <div className="d-flex flex-row gap-3 mt-5">
+            <div className="d-flex flex-row gap-3 mt-5 w-100 flex-wrap">
             <ListaLibros cardLibro={books}/>
-
             </div>
-            <InfoGeneral/>
 
+            <InfoGeneral/>
 
         </>
     )
