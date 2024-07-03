@@ -28,9 +28,9 @@ const ManageAccount = () => { //CRUD
         }
 
     }
-    //DE MOMENTO
-    const recargaPag =()=>{
-        setRecargar(!recargar)
+  
+    const actualizarDatos =(id,tituloE,autorE,dispoE,ubicaE,estadoE,categoriaE)=>{
+        
     }
 
     return (

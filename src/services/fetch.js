@@ -64,3 +64,26 @@ async function deleteData(endpoint,id) {
     }
 }
 export {deleteData}
+
+//PUT
+
+async function putData(obj, endpoint) {
+    try {
+        let response = await fetch(urlAPI+"/"+endpoint+obj.id, {
+          method: "PUT",
+          mode: "cors",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(obj)
+        });
+        let data = await response.json();
+        return data;
+      } catch(e) {
+        console.log(e);
+        return null;
+      }
+    
+}
+export default putData

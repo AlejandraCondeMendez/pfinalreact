@@ -6,16 +6,28 @@ import Estado from './Estado';
 import { postData } from '../services/fetch';
 import { useRef, useState } from 'react';
 
-const ModalLibro = (props, {recargar}) => {
+// eslint-disable-next-line no-unused-vars
+const PutModal = (props, {id, titulo:tituloInicial, autor:autorInicial, cantidad:cantidadInicial, estado:estadoInicial, ubicacion:ubicaInicial, categoria:categoriaInicial,  btnEditar}) => {
 
-  const [tituloE, setTitulo] = useState('')
-  const [autorE, setAutor] = useState('')
-  const [dispoE, setDispo] = useState('')
-  const [ubicaE, setUbica] = useState('')
-  const [estadoE, setEstado] = useState('')
-  const [opcionesE, setOpciones] = useState('')
+  const [tituloE, setTitulo] = useState(tituloInicial)
+  const [autorE, setAutor] = useState(autorInicial)
+  const [dispoE, setDispo] = useState(cantidadInicial)//cantidad
+  const [ubicaE, setUbica] = useState(ubicaInicial)
+  const [estadoE, setEstado] = useState(estadoInicial)
+  const [categoriaE, setCategoria] = useState(categoriaInicial)//opciones
 
-  
+  const actualizarData =(e)=>{
+    e.preventDefault()
+    setTitulo(tituloInicial)
+    setAutor(autorInicial)
+    setDispo(cantidadInicial)
+    setUbica(ubicaInicial)
+    setEstado(estadoInicial)
+    setCategoria(categoriaInicial)
+
+    btnEditar(e,id,tituloE,autorE,dispoE,ubicaE,estadoE,categoriaE)
+  }  
+
   const tituloR = useRef('')
   const autorR = useRef('')
   const disponibleR = useRef('')
@@ -30,22 +42,11 @@ const ModalLibro = (props, {recargar}) => {
     if (!titulo || !autor || !disponible || !ubicacion) {
       alert("Por favor llene todos los campos")
       return
-    } else { await agregarLibro({
-      titulo: tituloE, //titulo viene de la API - titulo viene del estado
-      autor: autorE,
-      usuarioID: localStorage.getItem("localID"),
-      cantidad: dispoE,
-      tipo: opcionesE, //opciones
-      estado: estadoE,
-      subidopor: localStorage.getItem("localUser"),
-      direccion: ubicaE
-    }, "libros")} //obj y endpoint
+    } else {
+        actualizarData()
+    } //obj y endpoint
   }
-
-  //cada libro se agrega a la API
-  const agregarLibro = async (libro, endpoint)=>{
-    await postData(libro, endpoint)
-  }
+    
   
     return (
       <>
@@ -78,4 +79,4 @@ const ModalLibro = (props, {recargar}) => {
       </>
     )
   }
-  export default ModalLibro
+  export default PutModal
