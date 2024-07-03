@@ -1,12 +1,15 @@
 import Navbar from "../components/Navbar"
 import Formulario from "../components/Formulario"
 import Footer from "../components/Footer"
+import HamburgerMenu from "../components/HamburgerMenu"
 
 const AcercaDnostros =()=>{
 
     return(
         <>
         <Navbar/>
+        <HamburgerMenu/>
+        
         <h1>Acerca de nosotros</h1>
 
         <h2>Historia</h2>

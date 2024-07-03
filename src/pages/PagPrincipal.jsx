@@ -1,11 +1,11 @@
 import Navbar from "../components/Navbar"
 import Opciones from "../components/Opciones"
 import InputPP from "../components/InputPP"
-import HamburgerMenu from "../components/HamburgerMenu"
 import InfoGeneral from "../components/InfoGeneral"
 import { useEffect, useState } from "react"
 import { getData } from "../services/fetch"
 import ListaLibros from "../components/ListaLibros"
+import HamburgerMenu from "../components/HamburgerMenu"
 
 
 const PagPrincipal = () => {
@@ -22,24 +22,26 @@ const PagPrincipal = () => {
     
     return (
         <>
-            <Navbar/>
+            <Navbar />
             <div className="hamburgerMover">
                 <HamburgerMenu/>
             </div>
             <h1 className="text-center">¡Welcome! Start to read now</h1>
-            <Opciones titulo={"Categorías de la biblioteca"}/>
+            <Opciones clase={"opciones"} titulo={"Categorías de la biblioteca"}/>
 
-            <div className="d-flex flex-row gap-3 mt-5 mb-5">
-                <p>Libros disponibles para venta</p>
-                <InputPP tipo={"number"} valor={0} />
-                <p>Libros disponibles para intercambio</p>
-                <InputPP tipo={"number"} valor={0} />
-                <p>Libros disponibles en ambas opciones</p>
-                <InputPP tipo={"number"} valor={0} />
+            <div className="divContador">
+                <div className="pTitulo">
+                <p className="inputLibro">Libros disponibles para venta</p> 
+                <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={0} />
+                </div>
+                <p className="inputLibro">Libros disponibles para intercambio</p>
+                <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={0} />
+                <p className="inputLibro">Libros disponibles en ambas opciones</p>
+                <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={0} />
 
             </div>
             <div className="d-flex flex-row gap-3 mt-5 w-100 flex-wrap">
-            <ListaLibros cardLibro={books}/>
+            <ListaLibros cardLibro={books} mostrarC={true}/>
             </div>
 
             <InfoGeneral/>

@@ -1,6 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 const HamburgerMenu = () => {
+
+  const navigate = useNavigate()
+  const navegar = ()=>{
+      navigate("/acercadenosotros")
+  }
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,8 +27,8 @@ const HamburgerMenu = () => {
         <div className="bar3"></div>
       </div>
       <div className={`menu-content ${isOpen ? 'show' : ''}`}>
-        <a className='text-nowrap' href="#home">My account</a>
-        <a className='text-nowrap' href="#services">Add a new book</a>
+        <a className='text-nowrap' onClick={navegar} >About us</a>
+        <a className='text-nowrap' onClick={()=>{navigate('/micuenta')}}>My account</a>
       </div>
     </div>
     </>

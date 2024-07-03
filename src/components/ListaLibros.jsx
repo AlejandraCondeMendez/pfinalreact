@@ -3,7 +3,7 @@
 //por cada iterar vamos un componente cardbook(libro)
 import CardBook from "./CardBook"
 
-const ListaLibros =({cardLibro,btnEditar,btnEliminar})=>{//estructura
+const ListaLibros =({cardLibro,btnEditar,btnEliminar,mostrarBotones,mostrarC})=>{//estructura
     
     return( 
         <>
@@ -17,7 +17,8 @@ const ListaLibros =({cardLibro,btnEditar,btnEliminar})=>{//estructura
                 estado={iterar.estado}
                 ubicacion={iterar.direccion}
                 subidopor={iterar.subidopor}
-                btnEditar={()=>btnEditar(iterar.id, iterar.titulo, iterar.autor, iterar.cantidad, iterar.categoria, iterar.estado, iterar.ubicacion)}
+                mostrar={mostrarBotones}
+                mostrarC={mostrarC}
                 btnEliminar={()=>btnEliminar(iterar.id)}
             />
             ))}

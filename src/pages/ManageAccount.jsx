@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import { getDataUser } from "../services/fetch";
 import { deleteData } from "../services/fetch";
 import { acceptPopUp } from "../services/alertas";
+import HamburgerMenu from "../components/HamburgerMenu"
+
 
 const ManageAccount = () => { //CRUD
     const [modalShow, setModalShow] = useState(false);
@@ -20,25 +22,28 @@ const ManageAccount = () => { //CRUD
         }
         librosUser()
     },[libros])
+
     
     const deleteLibro = async(id) =>{
         const isConfirmed = await acceptPopUp("Estás intentando eliminar un libro, ¿Continuar?", "El libro se eliminó con éxito", "La eliminación del libro fue cancelada");
    if (isConfirmed) {
             await deleteData("libros", id);
         }
-
     }
   
     const actualizarDatos =(id,tituloE,autorE,dispoE,ubicaE,estadoE,categoriaE)=>{
-        
+
     }
+
 
     return (
         <>
             <Navbar />
-            <h1>My account</h1>
-
-            <ListaLibros cardLibro={libros} btnEditar={""} btnEliminar={deleteLibro} />
+            <div className="hamburgerMover">
+                <HamburgerMenu/>
+            </div>
+            <h1 className="titulo">My account</h1>
+            <ListaLibros cardLibro={libros} btnEditar={""} btnEliminar={deleteLibro} mostrarBotones={true}/>
 
             <Button variant="primary" onClick={() => setModalShow(true)}>
                 Add a new book
@@ -46,7 +51,6 @@ const ManageAccount = () => { //CRUD
             <ModalLibro
                 show={modalShow}
                 onHide={() => setModalShow(false)}
-                recargar={recargaPag}
             />
         </>
     )

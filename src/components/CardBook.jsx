@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import Boton from "./Boton"
-const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, btnEliminar,btnEditar, imagen='https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png'})=>{
+const CardBook=({mostrar,mostrarC,titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, btnEliminar,btnEditar,btnAgregar, imagen='https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png'})=>{
     
     return(
     <div className="card" style={{ width: "18rem" }}>
@@ -17,9 +17,19 @@ const CardBook=({titulo, autor, cantidad, categoria, estado, ubicacion, subidopo
     <p className="card-text">
       Ubicación: {ubicacion}
     </p>
+    {mostrar &&
+    <>
     <Boton evento={btnEliminar} tipo={"button"} nombre={"Eliminar"} className={"btn btn-danger p-2"}/>
     <Boton evento={btnEditar} tipo={"button"} nombre={"Editar"} className={"btn btn-warning  p-2"}/>
+    </>
+    }
+    {mostrarC &&
+    <>
+    <Boton evento={btnAgregar} tipo={"button"} nombre={"Add cart"} className={"btn btn-success p-2"}/>
+    </>
+    }
     </div>
+    
   </div>
     )
 }

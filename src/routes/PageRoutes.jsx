@@ -8,7 +8,7 @@ import AcercaDnostros from "../pages/AcercaDnosotros"
 const PageRoutes = ()=>{
     return(
         <Routes>
-        <Route path="/" element={<InicioSesion/>}/>
+        <Route path="/" element={<PagPrincipal/>}/>
         <Route path="/crearcuenta" element={<CrearCuenta/>}/>
         <Route path="/iniciarsesion" element={<InicioSesion/>}/>
         <Route path="/paginaprincipal" element={<PagPrincipal/>}/>

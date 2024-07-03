@@ -1,5 +1,18 @@
 import Swal from 'sweetalert2'
 
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'center',
+    iconColor: 'white',
+    customClass: {
+      popup: 'colored-toast',
+    },
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+  })
+
+
 const acceptPopUp = (title, confirmText, denyText) => {
     return new Promise((resolve) => {
       Swal.fire({
@@ -28,4 +41,20 @@ const acceptPopUp = (title, confirmText, denyText) => {
     });
   };
 
-export {acceptPopUp}
+
+const muestraAlerta=async(titulo,icon)=>{
+    await Toast.fire({
+        icon: icon,
+        title: titulo,
+      })
+}
+
+
+export {acceptPopUp,muestraAlerta}
+
+
+
+
+
+
+  

@@ -44,6 +44,16 @@
       "id": "d0f8",
       "nombre": "ale23",
       "clave": "111"
+    },
+    {
+      "id": "3c8e",
+      "nombre": "Maria",
+      "clave": "123"
+    },
+    {
+      "id": "cf8b",
+      "nombre": "maria24",
+      "clave": "1212"
     }
   ],
   "libros": [
@@ -81,15 +91,15 @@
       "direccion": "KAA"
     },
     {
-      "id": "6fe7",
-      "titulo": "AAA",
-      "autor": "AAA",
-      "usuarioID": "93c8",
-      "cantidad": "AAA",
+      "id": "4e2e",
+      "titulo": "Priiin",
+      "autor": "Prinnn",
+      "usuarioID": "cf8b",
+      "cantidad": "4",
       "tipo": "",
       "estado": "",
-      "subidopor": "angie23",
-      "direccion": "AAA"
+      "subidopor": "maria24",
+      "direccion": "Sta"
     }
   ]
 }
