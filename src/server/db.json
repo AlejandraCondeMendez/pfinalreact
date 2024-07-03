@@ -48,50 +48,6 @@
   ],
   "libros": [
     {
-      "id": "b06d",
-      "titulo": "adds",
-      "autor": "dasd",
-      "usuarioID": "93c8",
-      "cantidad": "dadas",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "angie23",
-      "direccion": "asdasd"
-    },
-    {
-      "id": "029c",
-      "titulo": "adds",
-      "autor": "dasd",
-      "usuarioID": "93c8",
-      "cantidad": "dadas",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "angie23",
-      "direccion": "asdasd"
-    },
-    {
-      "id": "72a6",
-      "titulo": "adds",
-      "autor": "dasd",
-      "usuarioID": "93c8",
-      "cantidad": "dadas",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "angie23",
-      "direccion": "asdasd"
-    },
-    {
-      "id": "3d57",
-      "titulo": "sdasd",
-      "autor": "dsad",
-      "usuarioID": "93c8",
-      "cantidad": "sadasd",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "angie23",
-      "direccion": "sadasd"
-    },
-    {
       "id": "a7b4",
       "titulo": "BLAA",
       "autor": "BLAAA",
@@ -125,26 +81,15 @@
       "direccion": "KAA"
     },
     {
-      "id": "1796",
-      "titulo": "cvssdd",
-      "autor": "dssd",
+      "id": "672b",
+      "titulo": "NO",
+      "autor": "NO",
       "usuarioID": "93c8",
-      "cantidad": "sdv",
+      "cantidad": "NO",
       "tipo": "",
       "estado": "",
       "subidopor": "angie23",
-      "direccion": "sdsf"
-    },
-    {
-      "id": "d600",
-      "titulo": "LALA",
-      "autor": "Pepe Viyuela",
-      "usuarioID": "93c8",
-      "cantidad": "LOLO",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "angie23",
-      "direccion": "LILA"
+      "direccion": "NO"
     }
   ]
 }

@@ -6,7 +6,7 @@ import Estado from './Estado';
 import { postData } from '../services/fetch';
 import { useRef, useState } from 'react';
 
-const ModalLibro = (props) => {
+const ModalLibro = (props, {recargar}) => {
 
   const [tituloE, setTitulo] = useState('')
   const [autorE, setAutor] = useState('')
@@ -41,8 +41,6 @@ const ModalLibro = (props) => {
       direccion: ubicaE
     }, "libros")} //obj y endpoint
   }
-  
-  
 
   //cada libro se agrega a la API
   const agregarLibro = async (libro, endpoint)=>{
