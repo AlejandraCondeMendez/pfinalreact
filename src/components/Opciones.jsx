@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-const Opciones = ({clase, titulo}) => {
+const Opciones = ({clase, titulo,valor}) => {
     return (
         <>
-            <select className={clase}>
+            <select className={clase} onChange={valor}>
                 <option>{titulo}</option>
-                <option>General</option>
-                <option>Libros en inglés</option>
-                <option>Libros universitarios</option>
+                <option value={"General"}>General</option>
+                <option value={"Libros en inglés"}>Libros en inglés</option>
+                <option value={"Libros universitarios"}>Libros universitarios</option>
             </select>
         </>
     )

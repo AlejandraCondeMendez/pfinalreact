@@ -66,8 +66,12 @@ const ModalLibro = (props, {recargar}) => {
             <InputPP tipo={"text"} nombre={"Titulo"} clase={"w-25 mb-3 p-1"} refVali={tituloR} valor={tituloE} cambio={(e)=>setTitulo(e.target.value)}/>
               <InputPP tipo={"text"} nombre={"Autor"} clase={"w-25 mb-3 p-1"} refVali={autorR} valor={autorE} cambio={(e)=>setAutor(e.target.value)} />
               <InputPP tipo={"text"} nombre={"Disponile"} clase={"w-25 mb-3 p-1"} refVali={disponibleR} valor={dispoE} cambio={(e)=>setDispo(e.target.value)} />
-              <Estado clase={"text-center d-flex justify-content-center mx-auto mb-3 p-1"}/>
-              <Opciones clase={"text-center d-flex justify-content-center mx-auto mb-3 p-1"} titulo={"Categorías"}/>
+              <Estado clase={"text-center d-flex justify-content-center mx-auto mb-3 p-1"} valor={(e)=>{
+                setEstado(e.target.value)
+                console.log(estadoE)
+              }
+                }/>
+              <Opciones clase={"text-center d-flex justify-content-center mx-auto mb-3 p-1"} valor={(e)=>{setOpciones(e.target.value)}}  titulo={"Categorías"}/>
               <InputPP tipo={"text"} nombre={"Ubicación"} clase={"w-25 mb-3 p-1"} refVali={ubicacionR} valor={ubicaE} cambio={(e)=>setUbica(e.target.value)}/>
             </div>
           </Modal.Body>

@@ -26,7 +26,7 @@ const PagPrincipal = () => {
             <div className="hamburgerMover">
                 <HamburgerMenu/>
             </div>
-            <h1 className="text-center">¡Welcome! Start to read now</h1>
+            <h1 className="text-center">¡Welcome! {localStorage.getItem("localUser")} Start to read now</h1>
             <Opciones clase={"opciones"} titulo={"Categorías de la biblioteca"}/>
 
             <div className="divContador">
