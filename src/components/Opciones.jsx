@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+
+
 const Opciones = ({clase, titulo,valor}) => {
     return (
         <>

@@ -13,12 +13,12 @@ const CardBook = ({ mostrar, mostrarC, titulo, autor, cantidad, categoria, estad
       <div className="card-body">
         <p>Autor: {autor}</p>{/*propiedad*/}
         <p>Disponibles: {cantidad}</p>{/*propiedad*/}
-        <p>Categoría: {categoria}</p>{/*propiedad*/}
         <p>Estado: {estado}</p>{/*propiedad*/}
+        <p>Categoría: {categoria}</p>{/*propiedad*/}
         <p className="card-text">
           Ubicación: {ubicacion}{/*propiedad*/}
         </p>
-        {mostrar && //PREGUNTAR
+        {mostrar && //IF (si es verdadero mostrará el botón-el verdadero se encuentra en la páagina principal(true) y en my account (true))
           <>
             <Boton evento={btnEliminar} tipo={"button"} nombre={"Eliminar"} className={"btn btn-danger p-2"} />
             <Boton evento={btnEditar} tipo={"button"} nombre={"Editar"} className={"btn btn-warning  p-2"} />
@@ -31,8 +31,10 @@ const CardBook = ({ mostrar, mostrarC, titulo, autor, cantidad, categoria, estad
           </>
         }
       </div>
-
     </div>
   )
 }
 export default CardBook
+
+
+

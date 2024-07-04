@@ -4,8 +4,7 @@ import Navbar from "../components/Navbar"
 import ListaLibros from "../components/ListaLibros"
 import ModalLibro from "../components/ModalLibro";
 import { useEffect } from "react";
-import { getDataUser } from "../services/fetch";
-import { deleteData } from "../services/fetch";
+import { deleteData, getFilter } from "../services/fetch";
 import { acceptPopUp } from "../services/alertas";
 import HamburgerMenu from "../components/HamburgerMenu"
 
@@ -13,11 +12,10 @@ import HamburgerMenu from "../components/HamburgerMenu"
 const ManageAccount = () => { //CRUD
     const [modalShow, setModalShow] = useState(false);
     const [libros, setLibros] = useState([])
-    const [recargar, setRecargar] = useState(false)
 
     useEffect(()=>{
         const librosUser = async ()=>{
-            const dataLibroUser = await getDataUser(localStorage.getItem("localID"))
+            const dataLibroUser = await getFilter("usuarioID", localStorage.getItem("localID"))
             setLibros(dataLibroUser)
         }
         librosUser()
@@ -31,9 +29,6 @@ const ManageAccount = () => { //CRUD
         }
     }
   
-    const actualizarDatos =(id,tituloE,autorE,dispoE,ubicaE,estadoE,categoriaE)=>{
-
-    }
 
 
     return (
@@ -43,6 +38,7 @@ const ManageAccount = () => { //CRUD
                 <HamburgerMenu/>
             </div>
             <h1 className="titulo">My account</h1>
+
             <ListaLibros cardLibro={libros} btnEditar={""} btnEliminar={deleteLibro} mostrarBotones={true}/>
 
             <Button variant="primary" onClick={() => setModalShow(true)}>

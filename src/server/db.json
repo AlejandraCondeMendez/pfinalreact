@@ -102,15 +102,48 @@
       "direccion": "Sta"
     },
     {
-      "id": "35a0",
-      "titulo": "asdd",
-      "autor": "dsa",
-      "usuarioID": null,
-      "cantidad": "dsad",
-      "tipo": "",
+      "id": "34c2",
+      "titulo": "SOMBRA",
+      "autor": "CARAX",
+      "usuarioID": "93c8",
+      "cantidad": "2",
+      "tipo": "Libros en inglés",
       "estado": "Intercambio",
-      "subidopor": null,
-      "direccion": "adsd"
+      "subidopor": "angie23",
+      "direccion": "Sta"
+    },
+    {
+      "id": "ddf4",
+      "titulo": "adasd",
+      "autor": "dasd",
+      "usuarioID": "93c8",
+      "cantidad": "2sad",
+      "tipo": "Libros en inglés",
+      "estado": "Intercambio",
+      "subidopor": "angie23",
+      "direccion": "dasd"
+    },
+    {
+      "id": "4200",
+      "titulo": "AD",
+      "autor": "AD",
+      "usuarioID": "93c8",
+      "cantidad": "AD",
+      "tipo": "Libros universitarios",
+      "estado": "Ambos",
+      "subidopor": "angie23",
+      "direccion": "AD"
+    },
+    {
+      "id": "ca2f",
+      "titulo": "Ciudad",
+      "autor": "VV",
+      "usuarioID": "93c8",
+      "cantidad": "2",
+      "tipo": "General",
+      "estado": "Venta",
+      "subidopor": "angie23",
+      "direccion": "sta"
     }
   ]
 }

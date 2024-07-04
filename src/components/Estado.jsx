@@ -4,8 +4,8 @@ const Estado = ({clase,valor}) => {
         <>
             <select className={clase} onChange={valor}>
                 <option disabled value={""} selected>Opciones</option>
-                <option>Intercambio</option>
                 <option>Venta</option>
+                <option>Intercambio</option>
                 <option>Ambos</option>
             </select>
         </>

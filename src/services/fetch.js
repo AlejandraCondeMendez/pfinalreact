@@ -36,9 +36,9 @@ async function getData(endpoint,id="") {
 export {getData}
 
 //GET 
-async function getDataUser(id) {
+async function getFilter(filtro="", terminoBusqueda="") { //queryselector, propiedad de la API y el término de la propiedad
     try {
-        const response = await fetch(`http://localhost:2929/libros?usuarioID=${id}`)
+        const response = await fetch(`http://localhost:2929/libros?${filtro}=${terminoBusqueda}`)
         const data = await response.json()
         return data
     } catch (error) {
@@ -46,7 +46,7 @@ async function getDataUser(id) {
         return null 
     }
 }
-export {getDataUser}
+export {getFilter}
 
 //DELETE
 async function deleteData(endpoint,id) {
