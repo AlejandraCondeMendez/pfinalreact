@@ -3,44 +3,70 @@
     {
       "id": "0",
       "nombre": "Pepe",
-      "clave": "abcd"
+      "correo": "asdads@gamil.com",
+      "clave": "abcd",
+      "numero":"123123",
+      "ubicacion": "sasas"
+
     },
     {
       "id": "d120",
       "nombre": "Alejandra",
-      "clave": "1234"
+      "correo": "asdads@gamil.com",
+      "clave": "abcd",
+      "numero":"123123",
+      "ubicacion": "sasas"
     },
     {
       "id": "d283",
       "nombre": "Jeanca",
-      "clave": "das"
+      "correo": "asdads@gamil.com",
+      "clave": "abcd",
+      "numero":"123123",
+      "ubicacion": "sasas"
     },
     {
       "id": "4816",
       "nombre": "12",
-      "clave": "12"
+      "correo": "asdads@gamil.com",
+      "clave": "abcd",
+      "numero":"123123",
+      "ubicacion": "sasas"
     },
     {
       "id": "afbf",
       "nombre": "asdsada",
-      "clave": "aaaa"
+      "correo": "asdads@gamil.com",
+      "clave": "abcd",
+      "numero":"123123",
+      "ubicacion": "sasas"
     },
     {
       "id": "d0f8",
       "nombre": "ale23",
-      "clave": "111"
+      "correo": "asdads@gamil.com",
+      "clave": "abcd",
+      "numero":"123123",
+      "ubicacion": "sasas"
     },
     {
       "id": "3c8e",
       "nombre": "Maria",
-      "clave": "123"
+      "correo": "asdads@gamil.com",
+      "clave": "abcd",
+      "numero":"123123",
+      "ubicacion": "sasas"
     },
     {
       "id": "cf8b",
       "nombre": "maria24",
-      "clave": "1212"
+      "correo": "asdads@gamil.com",
+      "clave": "abcd",
+      "numero":"123123",
+      "ubicacion": "sasas"
     }
   ],
+
   "libros": [
     {
       "id": "f88f",

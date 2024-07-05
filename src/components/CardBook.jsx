@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 import Boton from "./Boton"
 
-const CardBook = ({ mostrar, mostrarC, titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, btnEliminar, btnEditar, btnAgregar, imagen = 'https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png' }) => {
-
-
+const CardBook = ({mostrar, mostrarC, titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, btnEliminar, btnEditar, btnAgregar, imagen = 'https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png' }) => {
 //Los datos en blanco son las propiedades que tendrá el card
   return (
     <div className="card" style={{ width: "18rem" }}>

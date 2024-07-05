@@ -2,12 +2,18 @@
 //componente que se va a utilizar en el Manage account y pagprincipal
 //por cada iterar vamos un componente cardbook(libro)
 import CardBook from "./CardBook"
-
-const ListaLibros =({cardLibro,btnEditar,btnEliminar,mostrarBotones,mostrarC})=>{//estructura
+import { useNavigate } from "react-router-dom"
+const ListaLibros =({cardLibro,btnEliminar,mostrarBotones,mostrarC})=>{//estructura
     
+    const navigate = useNavigate()
+    const recuperarIdLibro=(id)=>{
+        localStorage.setItem("idLibro",id)
+        navigate("/cardpage")
+    }
     return( 
         <>
             {cardLibro.map((iterar)=>(
+                <div key={iterar.id} onClick={()=>recuperarIdLibro(iterar.id)}> {/*????*/}
                 <CardBook
                 key={iterar.id}
                 titulo={iterar.titulo}
@@ -20,7 +26,8 @@ const ListaLibros =({cardLibro,btnEditar,btnEliminar,mostrarBotones,mostrarC})=>
                 mostrar={mostrarBotones}
                 mostrarC={mostrarC}
                 btnEliminar={()=>btnEliminar(iterar.id)}
-            />
+                />
+                </div>
             ))}
         </>
     )

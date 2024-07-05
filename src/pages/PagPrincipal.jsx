@@ -72,7 +72,7 @@ const PagPrincipal = () => {
             </div>
 
             <div className="d-flex flex-row gap-3 mt-5 w-100 flex-wrap">
-                {categoria === "" ? <ListaLibros cardLibro={books} mostrarC={true} /> : ""} {/*si general esta vacío mostrar todos los libros (books)*/}
+                {categoria === "" ? <ListaLibros  cardLibro={books} mostrarC={true}/> : ""} {/*si general esta vacío mostrar todos los libros (books) mostrarC viene del cardBook y si esta en verdadero los botones se mostraran (borrar y editar)*/}
                 {categoria === "Libros en ingles" ? <ListaLibros cardLibro={ingles} mostrarC={true} /> : ""}
                 {categoria === "Libros universitarios" ? <ListaLibros cardLibro={uni} mostrarC={true}/> : ""}
                 {categoria === "General" ? <ListaLibros cardLibro={general} mostrarC={true}/> : ""}
