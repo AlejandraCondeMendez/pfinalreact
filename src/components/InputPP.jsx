@@ -6,4 +6,4 @@ const inputPP = ({ tipo, nombre, refVali, cambio, valor, clase}) => {
         </>
     )
 }
-export default inputPP  
+export default inputPP      

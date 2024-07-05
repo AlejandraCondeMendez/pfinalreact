@@ -60,3 +60,14 @@
 .pTitulo{
     display: flex;
 }
+.botonCuenta{
+    margin-top: 30px;
+    margin-left: 180px;
+
+}
+.contadorCuenta{
+    position: absolute;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 860px;
+}

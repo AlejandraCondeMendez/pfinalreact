@@ -26,21 +26,6 @@
       "clave": "aaaa"
     },
     {
-      "id": "93c8",
-      "nombre": "angie23",
-      "clave": "123"
-    },
-    {
-      "id": "7774",
-      "nombre": "angie23",
-      "clave": "123"
-    },
-    {
-      "id": "b656",
-      "nombre": "angie23",
-      "clave": "123"
-    },
-    {
       "id": "d0f8",
       "nombre": "ale23",
       "clave": "111"
@@ -58,92 +43,81 @@
   ],
   "libros": [
     {
-      "id": "a7b4",
-      "titulo": "BLAA",
-      "autor": "BLAAA",
-      "usuarioID": "d0f8",
-      "cantidad": "BLAAA",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "ale23",
-      "direccion": "BLAAA"
+      "id": "f88f",
+      "titulo": "LALA",
+      "autor": "LOLO",
+      "usuarioID": "93c8",
+      "cantidad": "LIDSA",
+      "tipo": "General",
+      "estado": "Venta",
+      "subidopor": "angie23",
+      "direccion": "DASD"
     },
     {
-      "id": "7f68",
-      "titulo": "dsa",
-      "autor": "dsa",
-      "usuarioID": "d0f8",
-      "cantidad": "1",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "ale23",
-      "direccion": "dasas"
+      "id": "27d2",
+      "titulo": "LALA",
+      "autor": "LOLO",
+      "usuarioID": "93c8",
+      "cantidad": "LIDSA",
+      "tipo": "Libros en ingles",
+      "estado": "Venta",
+      "subidopor": "angie23",
+      "direccion": "DASD"
     },
     {
-      "id": "d6b1",
-      "titulo": "KHA",
-      "autor": "KHA",
-      "usuarioID": "0",
-      "cantidad": "KHA",
-      "tipo": "",
-      "estado": "",
-      "subidopor": "Pepe",
-      "direccion": "KAA"
+      "id": "0bc0",
+      "titulo": "LALA",
+      "autor": "LOLO",
+      "usuarioID": "93c8",
+      "cantidad": "LIDSA",
+      "tipo": "Libros universitarios",
+      "estado": "Venta",
+      "subidopor": "angie23",
+      "direccion": "DASD"
     },
     {
-      "id": "4e2e",
-      "titulo": "Priiin",
-      "autor": "Prinnn",
+      "id": "ac93",
+      "titulo": "PRIN",
+      "autor": "PRIN",
       "usuarioID": "cf8b",
-      "cantidad": "4",
-      "tipo": "",
-      "estado": "",
+      "cantidad": "2",
+      "tipo": "Libros en ingles",
+      "estado": "Venta",
       "subidopor": "maria24",
       "direccion": "Sta"
     },
     {
-      "id": "34c2",
-      "titulo": "SOMBRA",
-      "autor": "CARAX",
-      "usuarioID": "93c8",
-      "cantidad": "2",
-      "tipo": "Libros en inglés",
-      "estado": "Intercambio",
-      "subidopor": "angie23",
-      "direccion": "Sta"
-    },
-    {
-      "id": "ddf4",
-      "titulo": "adasd",
-      "autor": "dasd",
-      "usuarioID": "93c8",
-      "cantidad": "2sad",
-      "tipo": "Libros en inglés",
-      "estado": "Intercambio",
-      "subidopor": "angie23",
-      "direccion": "dasd"
-    },
-    {
-      "id": "4200",
-      "titulo": "AD",
-      "autor": "AD",
-      "usuarioID": "93c8",
-      "cantidad": "AD",
-      "tipo": "Libros universitarios",
-      "estado": "Ambos",
-      "subidopor": "angie23",
-      "direccion": "AD"
-    },
-    {
-      "id": "ca2f",
-      "titulo": "Ciudad",
-      "autor": "VV",
-      "usuarioID": "93c8",
-      "cantidad": "2",
+      "id": "7c05",
+      "titulo": "SA",
+      "autor": "SA",
+      "usuarioID": "d0f8",
+      "cantidad": "SA",
       "tipo": "General",
       "estado": "Venta",
-      "subidopor": "angie23",
-      "direccion": "sta"
+      "subidopor": "ale23",
+      "direccion": "Sat"
+    },
+    {
+      "id": "13f9",
+      "titulo": "DAS",
+      "autor": "DSA",
+      "usuarioID": "d283",
+      "cantidad": "DAS",
+      "tipo": "Libros universitarios",
+      "estado": "Intercambio",
+      "subidopor": "Jeanca",
+      "direccion": "ASD"
+    },
+    {
+      "id": "24dc",
+      "titulo": "POPO",
+      "autor": "POPO",
+      "usuarioID": "d283",
+      "cantidad": "DAS",
+      "tipo": "Libros universitarios",
+      "estado": "Ambos",
+      "subidopor": "Jeanca",
+      "direccion": "ASD"
     }
   ]
 }

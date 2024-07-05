@@ -4,6 +4,7 @@ const Navbar=()=>{
     const navigate = useNavigate()
     const irCrearSesion = ()=>{
         navigate("/crearcuenta")
+        localStorage.clear()
     }
     return(
         <>
@@ -32,7 +33,7 @@ const Navbar=()=>{
 
         </ul>
         <button onClick={irCrearSesion} className="btn btn-outline-success" type="submit">
-          Sing in
+          {localStorage.getItem("localID") ? "Log out" : "Sign up"}
         </button>
     </div>
   </div>

@@ -38,12 +38,12 @@ const ManageAccount = () => { //CRUD
                 <HamburgerMenu/>
             </div>
             <h1 className="titulo">My account</h1>
+            <p className="contadorCuenta">My books</p>
 
-            <ListaLibros cardLibro={libros} btnEditar={""} btnEliminar={deleteLibro} mostrarBotones={true}/>
-
-            <Button variant="primary" onClick={() => setModalShow(true)}>
+            <Button className="botonCuenta" variant="primary" onClick={() => setModalShow(true)}>
                 Add a new book
             </Button>
+            <ListaLibros cardLibro={libros} btnEditar={""} btnEliminar={deleteLibro} mostrarBotones={true}/>
             <ModalLibro
                 show={modalShow}
                 onHide={() => setModalShow(false)}

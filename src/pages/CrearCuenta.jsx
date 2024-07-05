@@ -47,7 +47,7 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
         <>
             <Navbar/>
             <HamburgerMenu/>
-            <h1 className="titulo">Sing in</h1>
+            <h1 className="titulo">Sign in</h1>
             <div className="divInputs d-flex flex-column">
                 <span>Create an username</span>
                 <Input tipo={"text"} nombre={"username"} refVali={userReg} valor={nombre} cambio={(e) => setNombre(e.target.value)} signo={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">

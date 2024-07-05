@@ -35,6 +35,9 @@ const InicioSesion = () => {
             localStorage.setItem("localID", valiUsuarios.id)//es para tener el ID sel usuario que ha iniciado sesión (insertar)
             localStorage.setItem("localUser", valiUsuarios.nombre)//id y usuarios vienen de la API
             irPagPrinci()
+            return
+        } else{
+            muestraAlerta("Usuario no existe ✖️","error")
         }
 
     }
