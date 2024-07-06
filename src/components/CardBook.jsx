@@ -3,6 +3,8 @@ import Boton from "./Boton"
 
 const CardBook = ({mostrar, mostrarC, titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, btnEliminar, btnEditar, btnAgregar, imagen = 'https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png' }) => {
 //Los datos en blanco son las propiedades que tendrá el card
+ 
+
   return (
     <div className="card" style={{ width: "18rem" }}>
       <h5 className="card-title">Libro: {titulo}</h5>{/*propiedad*/}

@@ -3,7 +3,7 @@
 //por cada iterar vamos un componente cardbook(libro)
 import CardBook from "./CardBook"
 import { useNavigate } from "react-router-dom"
-const ListaLibros =({cardLibro,btnEliminar,mostrarBotones,mostrarC})=>{//estructura
+const ListaLibros =({cardLibro,btnEliminar,mostrarBotones,mostrarC, agregarCarrito})=>{//estructura
     
     const navigate = useNavigate()
     const recuperarIdLibro=(id)=>{
@@ -13,7 +13,7 @@ const ListaLibros =({cardLibro,btnEliminar,mostrarBotones,mostrarC})=>{//estruct
     return( 
         <>
             {cardLibro.map((iterar)=>(
-                <div key={iterar.id} onClick={()=>recuperarIdLibro(iterar.id)}> {/*????*/}
+                <div key={iterar.id} onClick={()=>recuperarIdLibro(iterar.id)}> 
                 <CardBook
                 key={iterar.id}
                 titulo={iterar.titulo}
@@ -26,6 +26,7 @@ const ListaLibros =({cardLibro,btnEliminar,mostrarBotones,mostrarC})=>{//estruct
                 mostrar={mostrarBotones}
                 mostrarC={mostrarC}
                 btnEliminar={()=>btnEliminar(iterar.id)}
+                btnAgregar={agregarCarrito}
                 />
                 </div>
             ))}

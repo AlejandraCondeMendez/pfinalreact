@@ -17,9 +17,14 @@ const PagPrincipal = () => {
     const [uni, setUni] = useState([])
     const [ingles, setIngles] = useState([])
 
+    //setBooks contiene todos loslibros que se encuentran en la API
     const [books, setBooks] = useState([])
-    //selección de categorías
-    const [categoria, setCategoria] = useState("")
+    //selección de categorías = preguntar
+    const [categoria, setCategoria] = useState("")//Categoría es un estado que cambia cada vez que el componente 
+    //Opciones, cambie. Cuando este cambia, se actualiza el estado. Según el estado, se carga una u otra lista
+
+
+  
 
     useEffect(() => {
         const traeLibros = async () => {
@@ -52,7 +57,7 @@ const PagPrincipal = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar/>
             <div className="hamburgerMover">
                 <HamburgerMenu />
             </div>

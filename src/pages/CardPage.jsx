@@ -5,7 +5,7 @@ import ListaLibros from "../components/ListaLibros"
 
 const CardPage=()=>{
     const [traerLibro, setTraerLibro] = useState([])
-
+   
     const libroEspe = async ()=>{
         const datosLibro = await getFilter("id",localStorage.getItem("idLibro"))
         setTraerLibro(datosLibro)
@@ -16,7 +16,6 @@ const CardPage=()=>{
   
     return(
         <>
-        <Navbar/>
         
         <h1>Book information</h1>
         <ListaLibros cardLibro={traerLibro} mostrarC={true}/>

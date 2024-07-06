@@ -5,16 +5,15 @@
       "nombre": "Pepe",
       "correo": "asdads@gamil.com",
       "clave": "abcd",
-      "numero":"123123",
+      "numero": "123123",
       "ubicacion": "sasas"
-
     },
     {
       "id": "d120",
       "nombre": "Alejandra",
       "correo": "asdads@gamil.com",
       "clave": "abcd",
-      "numero":"123123",
+      "numero": "123123",
       "ubicacion": "sasas"
     },
     {
@@ -22,7 +21,7 @@
       "nombre": "Jeanca",
       "correo": "asdads@gamil.com",
       "clave": "abcd",
-      "numero":"123123",
+      "numero": "123123",
       "ubicacion": "sasas"
     },
     {
@@ -30,7 +29,7 @@
       "nombre": "12",
       "correo": "asdads@gamil.com",
       "clave": "abcd",
-      "numero":"123123",
+      "numero": "123123",
       "ubicacion": "sasas"
     },
     {
@@ -38,7 +37,7 @@
       "nombre": "asdsada",
       "correo": "asdads@gamil.com",
       "clave": "abcd",
-      "numero":"123123",
+      "numero": "123123",
       "ubicacion": "sasas"
     },
     {
@@ -46,7 +45,7 @@
       "nombre": "ale23",
       "correo": "asdads@gamil.com",
       "clave": "abcd",
-      "numero":"123123",
+      "numero": "123123",
       "ubicacion": "sasas"
     },
     {
@@ -54,7 +53,7 @@
       "nombre": "Maria",
       "correo": "asdads@gamil.com",
       "clave": "abcd",
-      "numero":"123123",
+      "numero": "123123",
       "ubicacion": "sasas"
     },
     {
@@ -62,11 +61,10 @@
       "nombre": "maria24",
       "correo": "asdads@gamil.com",
       "clave": "abcd",
-      "numero":"123123",
+      "numero": "123123",
       "ubicacion": "sasas"
     }
   ],
-
   "libros": [
     {
       "id": "f88f",
@@ -144,6 +142,24 @@
       "estado": "Ambos",
       "subidopor": "Jeanca",
       "direccion": "ASD"
+    },
+    {
+      "id": "4815",
+      "titulo": "AA",
+      "autor": "BB",
+      "usuarioID": "0",
+      "cantidad": "1",
+      "tipo": "General",
+      "estado": "Venta",
+      "subidopor": "Pepe",
+      "direccion": "DADS"
     }
+  ],
+  "comentarios":[
+    {
+    "idLibro": "0",
+    "idUsuario": "Asd",
+    "descripcion": "asdasd"
+  }
   ]
 }
