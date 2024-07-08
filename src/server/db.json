@@ -144,22 +144,30 @@
       "direccion": "ASD"
     },
     {
-      "id": "4815",
-      "titulo": "AA",
-      "autor": "BB",
+      "id": "725d",
+      "titulo": "ESTO",
+      "autor": "VA",
+      "cantidad": "A",
+      "direccion": "FUNCIONAR",
       "usuarioID": "0",
-      "cantidad": "1",
-      "tipo": "General",
-      "estado": "Venta",
-      "subidopor": "Pepe",
-      "direccion": "DADS"
+      "subidopor": "Pepe"
+    },
+    {
+      "id": "d821",
+      "titulo": "Libros",
+      "autor": "des",
+      "cantidad": "Pruebass",
+      "direccion": "Mi casas",
+      "usuarioID": "0",
+      "subidopor": "Pepe"
     }
   ],
-  "comentarios":[
+  "comentarios": [
     {
-    "idLibro": "0",
-    "idUsuario": "Asd",
-    "descripcion": "asdasd"
-  }
+      "idLibro": "0",
+      "idUsuario": "Asd",
+      "descripcion": "asdasd",
+      "id": "e165"
+    }
   ]
 }

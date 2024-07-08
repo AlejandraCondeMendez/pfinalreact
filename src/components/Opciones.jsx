@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 
 
-const Opciones = ({clase, titulo,evento}) => {
+const Opciones = ({clase, titulo,evento,valorActual}) => {
     return (
         <>
-            <select className={clase} onChange={evento}>
+            <select className={clase} onChange={evento} value={valorActual} >
                 <option selected disabled>{titulo}</option>
                 <option  value={""}>Todos</option>
                 <option value={"General"}>General</option>

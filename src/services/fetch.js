@@ -69,7 +69,7 @@ export {deleteData}
 
 async function putData(obj, endpoint) {
     try {
-        let response = await fetch(urlAPI+"/"+endpoint+obj.id, {
+        let response = await fetch(urlAPI+endpoint+"/"+obj.id, {
           method: "PUT",
           mode: "cors",
           credentials: "same-origin",

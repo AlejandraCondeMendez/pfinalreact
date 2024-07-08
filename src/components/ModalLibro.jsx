@@ -6,7 +6,7 @@ import Estado from './Estado';
 import { postData } from '../services/fetch';
 import { useRef, useState } from 'react';
 
-const ModalLibro = (props, {recargar}) => {
+const ModalLibro = (props) => {
 
   const [tituloE, setTitulo] = useState('')
   const [autorE, setAutor] = useState('')

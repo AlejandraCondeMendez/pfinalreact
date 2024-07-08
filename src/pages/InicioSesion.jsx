@@ -37,7 +37,7 @@ const InicioSesion = () => {
             irPagPrinci()
             return
         } else{
-            muestraAlerta("Usuario no existe ✖️","error")
+            muestraAlerta("Usuario no existe","error")
         }
 
     }

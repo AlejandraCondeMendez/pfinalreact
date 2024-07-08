@@ -1,19 +1,14 @@
 /* eslint-disable react/prop-types */
+
 //componente que se va a utilizar en el Manage account y pagprincipal
 //por cada iterar vamos un componente cardbook(libro)
 import CardBook from "./CardBook"
-import { useNavigate } from "react-router-dom"
-const ListaLibros =({cardLibro,btnEliminar,mostrarBotones,mostrarC, agregarCarrito})=>{//estructura
     
-    const navigate = useNavigate()
-    const recuperarIdLibro=(id)=>{
-        localStorage.setItem("idLibro",id)
-        navigate("/cardpage")
-    }
+    const ListaLibros =({cardLibro,btnEliminarL,mostrarBotones,mostrarC, btnEditarL})=>{//estructura
+
     return( 
         <>
             {cardLibro.map((iterar)=>(
-                <div key={iterar.id} onClick={()=>recuperarIdLibro(iterar.id)}> 
                 <CardBook
                 key={iterar.id}
                 titulo={iterar.titulo}
@@ -25,10 +20,17 @@ const ListaLibros =({cardLibro,btnEliminar,mostrarBotones,mostrarC, agregarCarri
                 subidopor={iterar.subidopor}
                 mostrar={mostrarBotones}
                 mostrarC={mostrarC}
-                btnEliminar={()=>btnEliminar(iterar.id)}
-                btnAgregar={agregarCarrito}
+                btnEliminar={()=>btnEliminarL(iterar.id)}
+                btnEditar={()=> //btnEditar:
+                    btnEditarL( //agarra todos los valores de la API
+                        iterar.id,
+                        iterar.titulo,
+                        iterar.autor,
+                        iterar.cantidad,
+                        iterar.direccion
+                    )
+                }
                 />
-                </div>
             ))}
         </>
     )
