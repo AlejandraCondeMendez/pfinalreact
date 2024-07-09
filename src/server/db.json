@@ -168,12 +168,10 @@
     },
     {
       "id": "5315",
-      "titulo": "La odisea",
-      "autor": "Homero",
-      "cantidad": "2",
-      "tipo": "Libros universitarios",
-      "estado": "Venta",
-      "direccion": "Santa Ana",
+      "titulo": "A",
+      "autor": "A",
+      "cantidad": "A",
+      "direccion": "A",
       "usuarioID": "a06a",
       "subidopor": "angie23"
     }

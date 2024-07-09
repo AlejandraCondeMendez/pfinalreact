@@ -12,32 +12,28 @@ import PutModal from "../components/PutModal";
 
 const ManageAccount = () => { //CRUD
 
-    const [editarL, setEditarL] = useState(null)
     const [modalShow, setModalShow] = useState(false);
     const [modalShowUpdate, setModalShowUpdate] = useState(false);
-    const [libros, setLibros] = useState([])
+    
+    const [datosPrevios, setDatosPrevios] = useState('')//edición del libro
+    const [libros, setLibros] = useState([])//los libros del usuario
 
     useEffect(()=>{
         const librosUser = async ()=>{
-            const dataLibroUser = await getFilter("usuarioID", localStorage.getItem("localID"))
+            const dataLibroUser = await getFilter("usuarioID", localStorage.getItem("localID")) //libros del usuario
             setLibros(dataLibroUser)
         }
         librosUser()
     },[libros])
     
     const deleteLibro = async(id) =>{
-        const isConfirmed = await acceptPopUp("Estás intentando eliminar un libro, ¿Continuar?", "El libro se eliminó con éxito", "La eliminación del libro fue cancelada");
-   if (isConfirmed) {
+        const alerta = await acceptPopUp("Estás intentando eliminar un libro, ¿Continuar?", "El libro se eliminó con éxito", "La eliminación del libro fue cancelada");
+   if (alerta) {
             await deleteData("libros", id);
         }
     }
 
-    const recuperaDatosLibro = (id,titulo,autor,cantidad,direccion,estado,categoria)=>{
-        setEditarL({id,titulo,autor,cantidad,direccion,estado,categoria})
-        setModalShowUpdate(true)
-    }
-
-    const actualizarLibro=async(id,titulo,autor,cantidad,direccion,estado,categoria)=>{
+    const actualizarLibro= async (id,titulo,autor,cantidad,direccion,estado,categoria)=>{
         let libroActualizado={
             id:id,
             titulo:titulo,
@@ -50,7 +46,12 @@ const ManageAccount = () => { //CRUD
             subidopor:localStorage.getItem("localUser")
         }
         await putData(libroActualizado,"libros")
-        setModalShowUpdate(false)
+        setModalShowUpdate(false) //OCULTAR EL MODAL
+    }
+
+    const recuperaDatosLibro = (id,titulo,autor,cantidad,direccion,estado,categoria)=>{ //propiedades del libro que queremos editar
+        setDatosPrevios({id,titulo,autor,cantidad,direccion,estado,categoria})//y luego se lo actualizamos al estado
+        setModalShowUpdate(true) //MOSTRAR EL MODAL
     }
 
 
@@ -66,22 +67,22 @@ const ManageAccount = () => { //CRUD
             <Button className="botonCuenta" variant="primary" onClick={() => setModalShow(true)}>
                 Add a new book
             </Button>
-            <ListaLibros cardLibro={libros} btnEditarL={recuperaDatosLibro} btnEliminarL={deleteLibro} mostrarBotones={true}/>
             <ModalLibro show={modalShow} onHide={() => setModalShow(false)}/>
-            {editarL &&
+            {datosPrevios && 
             <PutModal
-             mostrar={modalShowUpdate}
-             ocultar={()=>setModalShowUpdate(false)}
-             id={editarL.id}
-             titulo={editarL.titulo}
-             autor={editarL.autor}
-             cantidad={editarL.cantidad}
-             ubicacion={editarL.direccion}
-             categoria={editarL.categoria}
-             estado={editarL.estado}
-             btnEditarM={actualizarLibro}
+            mostrar={modalShowUpdate}
+            ocultar={()=>setModalShowUpdate(false)}
+            id={datosPrevios.id}//accedemos a la propiedad del estado
+            titulo={datosPrevios.titulo}
+            autor={datosPrevios.autor}
+            cantidad={datosPrevios.cantidad}
+            ubicacion={datosPrevios.direccion}
+            categoria={datosPrevios.categoria}
+            estado={datosPrevios.estado}
+            btnEditarM={actualizarLibro}
             />
-            }
+        }
+        <ListaLibros cardLibro={libros} btnEditarL={recuperaDatosLibro} btnEliminarL={deleteLibro} mostrarBotones={true}/>
         </>
     )
 }

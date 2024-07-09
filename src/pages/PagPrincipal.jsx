@@ -8,35 +8,40 @@ import ListaLibros from "../components/ListaLibros"
 import HamburgerMenu from "../components/HamburgerMenu"
 
 const PagPrincipal = () => {
-    // estados de la cardbook (venta, intercambio y ambos)
+
+    // estados de la cardbook-contadores (venta, intercambio y ambos)
     const [venta, setVenta] = useState(0)
     const [intercambio, setIntercambio] = useState(0)
     const [ambos, setAmbos] = useState(0)
-    // cambio de categorias
+
+    // cambio de categorias - tienen arreglos porque cada uno va a tener un conjunto de información distinto
     const [general, setGeneral] = useState([])
     const [uni, setUni] = useState([])
     const [ingles, setIngles] = useState([])
 
     //setBooks contiene todos loslibros que se encuentran en la API
     const [books, setBooks] = useState([])
-    //selección de categorías = preguntar
+
+    //selección de categorías (filtrar por general, universitarios, ingles)
     const [categoria, setCategoria] = useState("")//Categoría es un estado que cambia cada vez que el componente 
     //Opciones, cambie. Cuando este cambia, se actualiza el estado. Según el estado, se carga una u otra lista
 
-    useEffect(() => {
+    useEffect(() => {//tiene dos momentos de ejecucion: cuando se carga la página (ejecute la página) y cada vez que sus dependencias cambien
         const traeLibros = async () => {
             const getBooks = await getData("libros", "")
             setBooks(getBooks) // setBooks contiene todos los libros que estan en la API 
             console.log(getBooks);
         }
-        const contadores = async () => {
+
+        const contadores = async () => { 
             const ventaLibro = await getFilter("estado", "Venta")
             const interLibro = await getFilter("estado", "Intercambio")
             const ambosLibro = await getFilter("estado", "Ambos")
-            setVenta(ventaLibro.length)
+            setVenta(ventaLibro.length)//cantidad de libros que hay en la API
             setIntercambio(interLibro.length)
             setAmbos(ambosLibro.length)
         }
+
         const categoriaLibros = async () => {
             const geneLibros = await getFilter("tipo", "General")
             const inglesLibros = await getFilter("tipo", "Libros en ingles")
@@ -48,9 +53,7 @@ const PagPrincipal = () => {
         traeLibros()
         contadores()
         categoriaLibros()
-    }, [categoria])
-
-  
+    }, [categoria])//cada que categoría cambie se ejecuta el useEffect
 
     return (
         <>
@@ -58,28 +61,26 @@ const PagPrincipal = () => {
             <div className="hamburgerMover">
                 <HamburgerMenu />
             </div>
-            <h1 className="text-center">¡Welcome! {localStorage.getItem("localUser")} <br /> Start to read now</h1>
-
-            <Opciones clase={"opciones"} evento={(e) => setCategoria(e.target.value)} titulo={"Categorías de la biblioteca"} />
-
+            <h1 className="text-center">¡Welcome! {localStorage.getItem("localUser")} <br /> Start to read now</h1> {/*si hay un usuario iniciado muestra el welcome con ese nombre sino solo muestra Welcome*/}
+            
+            <Opciones clase={"opciones"} evento={(e)=>setCategoria(e.target.value)} titulo={"Categorías de la biblioteca"} />
+            
             <div className="divContador">
                 <div className="pTitulo">
-                    <p className="inputLibro">Libros disponibles para venta</p>
-                    <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={venta} />
+                <p className="inputLibro">Libros disponibles para venta</p>
+                <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={venta} />
                 </div>
                 <p className="inputLibro">Libros disponibles para intercambio</p>
                 <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={intercambio} />
                 <p className="inputLibro">Libros disponibles en ambas opciones</p>
                 <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={ambos} />
             </div>
-
             <div className="d-flex flex-row gap-3 mt-5 w-100 flex-wrap">
                 {categoria === "" ? <ListaLibros  cardLibro={books} mostrarC={true}/> : ""} {/*si general esta vacío mostrar todos los libros (books) mostrarC viene del cardBook y si esta en verdadero los botones se mostraran (borrar y editar)*/}
                 {categoria === "Libros en ingles" ? <ListaLibros cardLibro={ingles} mostrarC={true} /> : ""}
                 {categoria === "Libros universitarios" ? <ListaLibros cardLibro={uni} mostrarC={true}/> : ""}
                 {categoria === "General" ? <ListaLibros cardLibro={general} mostrarC={true}/> : ""}
             </div>
-
             <InfoGeneral />
         </>
     )

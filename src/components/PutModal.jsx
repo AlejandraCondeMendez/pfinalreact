@@ -7,7 +7,7 @@ import Estado from "./Estado"
 import Opciones from "./Opciones"
 // eslint-disable-next-line no-unused-vars
 
-const PutModal = ({ mostrar, ocultar, id, titulo, autor, cantidad, categoria, estado, ubicacion, btnEditarM, recargar}) => {
+const PutModal = ({ mostrar, ocultar, id, titulo, autor, cantidad, categoria, estado, ubicacion, btnEditarM}) => {
 
   //Estados de cada input y input de elección del Modal
   const [tituloE, setTituloE] = useState(titulo)
