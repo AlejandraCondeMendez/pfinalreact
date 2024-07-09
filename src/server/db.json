@@ -63,6 +63,11 @@
       "clave": "abcd",
       "numero": "123123",
       "ubicacion": "sasas"
+    },
+    {
+      "id": "a06a",
+      "nombre": "angie23",
+      "clave": "123"
     }
   ],
   "libros": [
@@ -145,8 +150,8 @@
     },
     {
       "id": "725d",
-      "titulo": "ESTO",
-      "autor": "VA",
+      "titulo": "DD",
+      "autor": "VAASDASDA",
       "cantidad": "A",
       "direccion": "FUNCIONAR",
       "usuarioID": "0",
@@ -160,6 +165,17 @@
       "direccion": "Mi casas",
       "usuarioID": "0",
       "subidopor": "Pepe"
+    },
+    {
+      "id": "5315",
+      "titulo": "La odisea",
+      "autor": "Homero",
+      "cantidad": "2",
+      "tipo": "Libros universitarios",
+      "estado": "Venta",
+      "direccion": "Santa Ana",
+      "usuarioID": "a06a",
+      "subidopor": "angie23"
     }
   ],
   "comentarios": [

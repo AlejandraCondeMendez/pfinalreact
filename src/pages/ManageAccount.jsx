@@ -13,7 +13,6 @@ import PutModal from "../components/PutModal";
 const ManageAccount = () => { //CRUD
 
     const [editarL, setEditarL] = useState(null)
-    const [recarga,setRecarga]=useState(false)
     const [modalShow, setModalShow] = useState(false);
     const [modalShowUpdate, setModalShowUpdate] = useState(false);
     const [libros, setLibros] = useState([])
@@ -24,7 +23,7 @@ const ManageAccount = () => { //CRUD
             setLibros(dataLibroUser)
         }
         librosUser()
-    },[recarga]) //CAMBIAR LUEGO
+    },[libros])
     
     const deleteLibro = async(id) =>{
         const isConfirmed = await acceptPopUp("Estás intentando eliminar un libro, ¿Continuar?", "El libro se eliminó con éxito", "La eliminación del libro fue cancelada");
@@ -33,17 +32,19 @@ const ManageAccount = () => { //CRUD
         }
     }
 
-    const recuperaDatosLibro = (id,titulo,autor,cantidad,direccion)=>{
-        setEditarL({id,titulo,autor,cantidad,direccion})
+    const recuperaDatosLibro = (id,titulo,autor,cantidad,direccion,estado,categoria)=>{
+        setEditarL({id,titulo,autor,cantidad,direccion,estado,categoria})
         setModalShowUpdate(true)
     }
 
-    const actualizarLibro=async(id,titulo,autor,cantidad,direccion)=>{
+    const actualizarLibro=async(id,titulo,autor,cantidad,direccion,estado,categoria)=>{
         let libroActualizado={
             id:id,
             titulo:titulo,
             autor:autor,
             cantidad:cantidad,
+            tipo:categoria,
+            estado:estado,
             direccion:direccion,
             usuarioID:localStorage.getItem("localID"),
             subidopor:localStorage.getItem("localUser")
@@ -76,6 +77,8 @@ const ManageAccount = () => { //CRUD
              autor={editarL.autor}
              cantidad={editarL.cantidad}
              ubicacion={editarL.direccion}
+             categoria={editarL.categoria}
+             estado={editarL.estado}
              btnEditarM={actualizarLibro}
             />
             }
