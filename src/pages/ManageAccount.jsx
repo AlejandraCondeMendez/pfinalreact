@@ -83,7 +83,9 @@ const ManageAccount = () => { //CRUD
             btnEditarM={actualizarLibro}
             />
         }
+        <div className="cardPagPrin">
         <ListaLibros cardLibro={libros} btnEditarL={actualizarDatos} btnEliminarL={deleteLibro} mostrarBotones={true}/>
+        </div>
         </>
     )
 }

@@ -10,23 +10,27 @@ const FormCardPage=()=>{
       <label htmlFor="disabledTextInput" className="form-label">
         Phone number
       </label>
-      <input
+      <div className="inputCardPag">
+      <input 
         type="text"
         id="disabledTextInput"
         className="form-control"
         placeholder="Disabled input"
       />
+      </div>
     </div>
     <div className="mb-3">
       <label htmlFor="disabledTextInput" className="form-label">
         Email
       </label>
+      <div className="inputCardPag">
       <input
         type="text"
         id="disabledTextInput"
         className="form-control"
         placeholder="Disabled input"
       />
+      </div>
     </div>
 
     <div className="mb-3">

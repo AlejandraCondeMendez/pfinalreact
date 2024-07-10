@@ -17,7 +17,7 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
 
     const validarInputR = async () => {
         if (!userReg.current.value && !passReg.current.value) {
-            alert("Por favor llene los campos vacíos")
+            muestraAlerta("Por favor llene los campos vacíos", "error")
             return
         }
         let cuenta = {

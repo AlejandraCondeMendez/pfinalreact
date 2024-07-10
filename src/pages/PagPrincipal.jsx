@@ -71,8 +71,9 @@ const PagPrincipal = () => {
             </div>
             <h1 className="text-center">¡Welcome! {localStorage.getItem("localUser")} <br /> Start to read now</h1> {/*si hay un usuario iniciado muestra el welcome con ese nombre sino solo muestra Welcome*/}
             
+            <div className="filtroOpciones">
             <Opciones clase={"opciones"} evento={(e)=>setCategoria(e.target.value)} titulo={"Categorías de la biblioteca"} />
-            
+            </div>
             <div className="divContador">
                 <div className="pTitulo">
                 <p className="inputLibro">Libros disponibles para venta</p>

@@ -15,8 +15,8 @@
     padding: 10px;
     border: none;
     border-radius: 20px;
-    margin-top: 30px;
-    margin-left: 80px;
+    margin-top: 25px;
+    margin-left: 90px;
 }
 
 .botoncito2{
@@ -24,8 +24,8 @@
     padding: 10px;
     border: none;
     border-radius: 20px;
-    margin-top: 10px;
-    margin-left: 65px;
+    margin-top: 35px;
+    margin-left: 90px;
 }
 
 .titulo{
@@ -34,10 +34,10 @@
 }
 .textcreate{
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 68px;
 }
 .textcreate2{
-    margin-left: 95px;
+    margin-left: 115px;
 }
 
 .libroIcon{
@@ -49,7 +49,8 @@
 }
 .opciones{
     margin-top: 20px;
-    margin-left: 500px;
+    margin-bottom: 35px;
+    margin-left: 480px;
     padding: 10px;
     border-radius: 10px;
 }
@@ -79,7 +80,7 @@
 .btnCart{
     display: flex;
     margin-bottom: 10px;
-    background-color: #FA7921;
+    background-color: #FF9B42;
     width: 140px;
     text-align: center;
     justify-content: center;
@@ -87,15 +88,12 @@
     border-radius: 9px;
 }
 .btnCart:hover{
-    background-color:#e77020;
+    background-color:#fa7821eb;
 }
 .btnInfo{
     width: 250px;
     text-align: center;
     justify-content: center;
-}
-.btnInfo:hover{
-    background-color: ;
 }
 .btnRemove{
     border: none;
@@ -104,4 +102,26 @@
     background-color: #66D7D1;
     position: absolute;
     margin-left: 150px;
+}
+.btnRemove:hover{
+    background-color: #66d7d1cf ;
+}
+.cardPage{
+    margin-top: 50px;
+    margin-left: 180px;
+}
+.formCardPage{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -650px;
+}
+.inputCardPag{
+    width: 400px;
+}
+.carrusel{
+    margin-top: 35px;
+}
+.cardPagPrin{
+    margin-top: 35px;
+    margin-left: 40px;
 }

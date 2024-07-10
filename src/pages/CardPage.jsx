@@ -16,8 +16,6 @@ const CardPage=()=>{
     const [books, setBooks] = useState([])
     const navigate=useNavigate()
     
-   
-
     useEffect(() => {//tiene dos momentos de ejecucion: cuando se carga la página (ejecute la página) y cada vez que sus dependencias cambien
         const traeLibros = async () => {
             const getBooks = await getData("libros", "")
@@ -49,15 +47,21 @@ const CardPage=()=>{
         <>
         <Navbar/>
         <HamburgerMenu/>
-        <h1>Book information</h1>
+        <h1 className="titulo">Book information</h1>
+        <div className="cardPage">
         <ListaLibros cardLibro={libroInfo} mostrarC={true} btnInfoL={libroGet} btnAgregarL={aumenta} btnQuitarL={disminuye}/>
+        </div>
         {/*que aparezcan los demás libros*/}
+        <div className="formCardPage">
         <FormCardPage/>
-        <Carrusel cardLibro={books} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}} />
+        </div>
+        <div className="carrusel">
+        <Carrusel cardLibro={books} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage'),window.scrollTo({
+            top:0,
+            behavior: 'smooth'
+        })}} />
+        </div>
         <p>Reviews</p>
-       
-
-
         </>
     )
 }
