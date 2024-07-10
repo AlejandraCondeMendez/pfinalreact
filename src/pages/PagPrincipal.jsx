@@ -2,13 +2,21 @@ import Navbar from "../components/Navbar"
 import Opciones from "../components/Opciones"
 import InputPP from "../components/InputPP"
 import InfoGeneral from "../components/InfoGeneral"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { getData, getFilter } from "../services/fetch"
 import ListaLibros from "../components/ListaLibros"
 import HamburgerMenu from "../components/HamburgerMenu"
+import { ContadorContxt } from "../components/Contador"
+import { useNavigate } from "react-router-dom"
+
 
 const PagPrincipal = () => {
+    
+    const navigate=useNavigate()
 
+    const {aumenta} = useContext(ContadorContxt)
+    const {disminuye} = useContext(ContadorContxt)
+    
     // estados de la cardbook-contadores (venta, intercambio y ambos)
     const [venta, setVenta] = useState(0)
     const [intercambio, setIntercambio] = useState(0)
@@ -76,10 +84,10 @@ const PagPrincipal = () => {
                 <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={ambos} />
             </div>
             <div className="d-flex flex-row gap-3 mt-5 w-100 flex-wrap">
-                {categoria === "" ? <ListaLibros  cardLibro={books} mostrarC={true}/> : ""} {/*si general esta vacío mostrar todos los libros (books) mostrarC viene del cardBook y si esta en verdadero los botones se mostraran (borrar y editar)*/}
-                {categoria === "Libros en ingles" ? <ListaLibros cardLibro={ingles} mostrarC={true} /> : ""}
-                {categoria === "Libros universitarios" ? <ListaLibros cardLibro={uni} mostrarC={true}/> : ""}
-                {categoria === "General" ? <ListaLibros cardLibro={general} mostrarC={true}/> : ""}
+                {categoria === "" ? <ListaLibros  cardLibro={books} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""} {/*si general esta vacío mostrar todos los libros (books) mostrarC viene del cardBook y si esta en verdadero los botones se mostraran (borrar y editar)*/}
+                {categoria === "Libros en ingles" ? <ListaLibros cardLibro={ingles} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye}  /> : ""}
+                {categoria === "Libros universitarios" ? <ListaLibros cardLibro={uni}  mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye}/> : ""}
+                {categoria === "General" ? <ListaLibros cardLibro={general} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} /> : ""}
             </div>
             <InfoGeneral />
         </>

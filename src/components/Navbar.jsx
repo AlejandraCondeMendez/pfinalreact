@@ -1,12 +1,16 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom"
+import { useContext } from "react"
+import { ContadorContxt } from "./Contador"
 
-const Navbar = ({ contador }) => {
+const Navbar = () => {
+  const {contador} = useContext(ContadorContxt)
   const navigate = useNavigate()
   const irCrearSesion = () => {
     navigate("/crearcuenta")
     localStorage.clear()
   }
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">

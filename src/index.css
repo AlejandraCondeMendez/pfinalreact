@@ -76,6 +76,20 @@
     margin-top: -8px;
     margin-left: 990px;
 }
-.moreInf{
-    
+.btnCart{
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 27px;
+    background-color: #FA7921;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    border-radius: 9px;
+}
+.btnInfo{
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 27px;
 }

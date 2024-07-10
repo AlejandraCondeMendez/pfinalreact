@@ -15,7 +15,7 @@ const ManageAccount = () => { //CRUD
     const [modalShow, setModalShow] = useState(false);
     const [modalShowUpdate, setModalShowUpdate] = useState(false);
     
-    const [datosPrevios, setDatosPrevios] = useState('')//edición del libro
+    const [actualizar, setActualizar] = useState(null)//edición del libro
     const [libros, setLibros] = useState([])//los libros del usuario
 
     useEffect(()=>{
@@ -49,8 +49,8 @@ const ManageAccount = () => { //CRUD
         setModalShowUpdate(false) //OCULTAR EL MODAL
     }
 
-    const recuperaDatosLibro = (id,titulo,autor,cantidad,direccion,estado,categoria)=>{ //propiedades del libro que queremos editar
-        setDatosPrevios({id,titulo,autor,cantidad,direccion,estado,categoria})//y luego se lo actualizamos al estado
+    const actualizarDatos = (id,titulo,autor,cantidad,direccion,estado,categoria)=>{ //propiedades del libro que queremos editar
+        setActualizar({id,titulo,autor,cantidad,direccion,estado,categoria})//y luego se lo actualizamos al estado
         setModalShowUpdate(true) //MOSTRAR EL MODAL
     }
 
@@ -67,22 +67,23 @@ const ManageAccount = () => { //CRUD
             <Button className="botonCuenta" variant="primary" onClick={() => setModalShow(true)}>
                 Add a new book
             </Button>
+
             <ModalLibro show={modalShow} onHide={() => setModalShow(false)}/>
-            {datosPrevios && 
+            {actualizar && 
             <PutModal
             mostrar={modalShowUpdate}
             ocultar={()=>setModalShowUpdate(false)}
-            id={datosPrevios.id}//accedemos a la propiedad del estado
-            titulo={datosPrevios.titulo}
-            autor={datosPrevios.autor}
-            cantidad={datosPrevios.cantidad}
-            ubicacion={datosPrevios.direccion}
-            categoria={datosPrevios.categoria}
-            estado={datosPrevios.estado}
+            id={actualizar.id}//accedemos a la propiedad del estado
+            titulo={actualizar.titulo}
+            autor={actualizar.autor}
+            cantidad={actualizar.cantidad}
+            ubicacion={actualizar.direccion}
+            categoria={actualizar.categoria}
+            estado={actualizar.estado}
             btnEditarM={actualizarLibro}
             />
         }
-        <ListaLibros cardLibro={libros} btnEditarL={recuperaDatosLibro} btnEliminarL={deleteLibro} mostrarBotones={true}/>
+        <ListaLibros cardLibro={libros} btnEditarL={actualizarDatos} btnEliminarL={deleteLibro} mostrarBotones={true}/>
         </>
     )
 }

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { getData, postData } from "../services/fetch"
 import Navbar from "../components/Navbar"
 import HamburgerMenu from "../components/HamburgerMenu"
+import { muestraAlerta } from "../services/alertas"
 
 
 const CrearCuenta = () => { //useState en los imputs para poder obtener lo que esta escrito de una fomra actualizada (para tener el input de una forma actualizada cada vez que se escribe (alejandra23-cada letra se actualiza)
@@ -25,7 +26,7 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
         }
         let datos = await getData("usuarios", "") //ocupamos todos los datos del endpoint usuarios
         if (datos.find(usuarios => nombre === usuarios.nombre)) { //find va abuscar dentro de datos y va a iterar (nombre viene del estado-input y usuarios.nombre es de la API)
-            alert("usuario ya existe")
+            muestraAlerta("Usuario ya existe", "error")
             return
         } else {
             await postCuenta(cuenta, "usuarios")
@@ -39,7 +40,7 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
     }
 
     const postCuenta = async (obj, endpoint) => {
-        alert("cuenta registrada")
+        muestraAlerta("Cuenta registrada", "success")
         await postData(obj, endpoint)
     }
 

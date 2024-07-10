@@ -4,7 +4,7 @@ import Boton from "./Boton"
 /*renerizzar. cargar o lo que se muestra en la página
 propiedades principales, de funcionalidad y renderizado*/
 
-const CardBook = ({mostrar, mostrarC, titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, btnEliminar, btnEditar, btnAgregar, imagen = 'https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png' }) => {
+const CardBook = ({mostrar, mostrarC, titulo, autor, cantidad, categoria, estado, ubicacion, subidopor, btnInfo, btnEliminar, btnEditar, btnAgregar, btnQuitar, imagen = 'https://cdn3.iconfinder.com/data/icons/education-3-6/48/105-512.png' }) => {
 //Los datos en blanco son las propiedades que tendrá el card
  
 
@@ -25,14 +25,16 @@ const CardBook = ({mostrar, mostrarC, titulo, autor, cantidad, categoria, estado
         {mostrar && //IF (si es verdadero mostrará el botón - el verdadero se encuentra en la páagina principal(true) y en my account (true))
           <>
             <Boton evento={btnEliminar} tipo={"button"} nombre={"Eliminar"} className={"btn btn-danger p-2"} />
-            <Boton evento={btnEditar} tipo={"button"} nombre={"Editar"} className={"btn btn-outline-secondary p-2"} />
+            <Boton evento={btnEditar} tipo={"button"} nombre={"Editar"} className={"btn btn-warning p-2"} />
           </>
         }
 
         {mostrarC &&
           <>
-            <Boton evento={btnAgregar} tipo={"button"} nombre={"Add cart"} className={"btn btn-success p-2"} />
-            <Boton tipo={"button"} nombre={"More information"} className={"btn btn-outline-secondary p-2"}/>
+            <Boton evento={btnQuitar} tipo={"button"} nombre={"Remove"}/>
+            <Boton evento={btnAgregar} tipo={"button"} nombre={"Add to cart"} className={"btnCart p-2"} />
+            <Boton evento={btnInfo} tipo={"button"} nombre={"More information"} className={"btnInfo btn btn-warning p-2"}/>
+            
           </>
         }
       </div>

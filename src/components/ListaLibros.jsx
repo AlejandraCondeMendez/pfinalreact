@@ -5,8 +5,9 @@
 import CardBook from "./CardBook"
 //listaLibros ya tiene la información de la API
     
-    const ListaLibros = ({cardLibro,btnEliminarL,mostrarBotones,mostrarC, btnEditarL})=>{//estructura - conjunto de todas las cards
-
+    const ListaLibros = ({cardLibro,btnEliminarL,mostrarBotones,mostrarC, btnEditarL, btnAgregarL, btnQuitarL, btnInfoL})=>{//estructura - conjunto de todas las cards
+        
+        
     return( 
         <>
             {cardLibro.map((iterar)=>(
@@ -20,8 +21,11 @@ import CardBook from "./CardBook"
                 ubicacion={iterar.direccion}
                 subidopor={iterar.subidopor}
                 mostrar={mostrarBotones} //mostrarBotones tendrá el true o false
-                mostrarC={mostrarC} //mostrarBotones tendrá el true o false
+                mostrarC={mostrarC} //mostrarC tendrá el true o false
+                btnAgregar={btnAgregarL}
+                btnQuitar={btnQuitarL}
                 btnEliminar={()=>btnEliminarL(iterar.id)}
+                btnInfo={()=>btnInfoL(localStorage.setItem("libroLocal", iterar.id))}
                 btnEditar={()=> //btnEditar:
                     btnEditarL( //agarra todos los valores de la API
                         iterar.id,
