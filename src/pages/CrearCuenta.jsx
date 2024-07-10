@@ -3,7 +3,6 @@ import Input from "../components/Input"
 import { useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getData, postData } from "../services/fetch"
-import Navbar from "../components/Navbar"
 import HamburgerMenu from "../components/HamburgerMenu"
 import { muestraAlerta } from "../services/alertas"
 
@@ -46,8 +45,6 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
 
     return (
         <>
-            <Navbar/>
-            <HamburgerMenu/>
             <h1 className="titulo">Sign in</h1>
             <div className="divInputs d-flex flex-column">
                 <span>Create an username</span>
