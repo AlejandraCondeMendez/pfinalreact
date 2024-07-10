@@ -1,12 +1,15 @@
 import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import PageRoutes from './routes/PageRoutes'
-import ContadorProvider, { ContadorContxt } from './components/Contador'
+import ContadorProvider from './components/Contador'
+
+import '@radix-ui/themes/styles.css';
 function App() {
  
 
   return (
     <>
+    
     <BrowserRouter>
     <ContadorProvider>
     <PageRoutes/>

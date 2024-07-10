@@ -31,8 +31,8 @@ const CardBook = ({mostrar, mostrarC, titulo, autor, cantidad, categoria, estado
 
         {mostrarC &&
           <>
-            <Boton evento={btnQuitar} tipo={"button"} nombre={"Remove"}/>
-            <Boton evento={btnAgregar} tipo={"button"} nombre={"Add to cart"} className={"btnCart p-2"} />
+            <Boton evento={btnQuitar} tipo={"button"} nombre={"Remove"} className={"btnRemove p-2"}/>
+            <Boton evento={btnAgregar} tipo={"button"} nombre={"Add to cart"} className={"btnCart p-2"}/>
             <Boton evento={btnInfo} tipo={"button"} nombre={"More information"} className={"btnInfo btn btn-warning p-2"}/>
             
           </>

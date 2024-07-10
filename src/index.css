@@ -1,6 +1,7 @@
+
 .divInputs{
     padding: 50px 30px;
-    max-width: 300px;
+    max-width: 330px;
     height: 380px;
     gap: 20px;
     border: 1px solid black;
@@ -15,7 +16,7 @@
     border: none;
     border-radius: 20px;
     margin-top: 30px;
-    margin-left: 65px;
+    margin-left: 80px;
 }
 
 .botoncito2{
@@ -41,7 +42,7 @@
 
 .libroIcon{
     margin-top: 3px;
-    margin-left: 95px;
+    margin-left: 110px;
 }
 .cart{
     margin-left: 950px;
@@ -63,7 +64,6 @@
 .botonCuenta{
     margin-top: 30px;
     margin-left: 180px;
-
 }
 .contadorCuenta{
     position: absolute;
@@ -79,17 +79,29 @@
 .btnCart{
     display: flex;
     margin-bottom: 10px;
-    margin-left: 27px;
     background-color: #FA7921;
-    width: 200px;
+    width: 140px;
     text-align: center;
     justify-content: center;
     border: none;
     border-radius: 9px;
 }
+.btnCart:hover{
+    background-color:#e77020;
+}
 .btnInfo{
-    width: 200px;
+    width: 250px;
     text-align: center;
     justify-content: center;
-    margin-left: 27px;
+}
+.btnInfo:hover{
+    background-color: ;
+}
+.btnRemove{
+    border: none;
+    border-radius: 9px;
+    width: 100px;
+    background-color: #66D7D1;
+    position: absolute;
+    margin-left: 150px;
 }

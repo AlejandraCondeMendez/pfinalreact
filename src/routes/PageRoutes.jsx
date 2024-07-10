@@ -9,6 +9,7 @@ import CardPage from "../pages/CardPage"
 const PageRoutes = () => {
     
     return (
+        
         <Routes>
             <Route path="/" element={<PagPrincipal />} />
             <Route path="/crearcuenta" element={<CrearCuenta />} />
@@ -18,6 +19,7 @@ const PageRoutes = () => {
             <Route path="/acercadenosotros" element={<AcercaDnostros />} />
             <Route path="/cardpage" element={<CardPage />} />
         </Routes>
+    
     )
 }
 export default PageRoutes

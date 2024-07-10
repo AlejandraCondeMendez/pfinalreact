@@ -13,7 +13,7 @@ const Formulario=()=>{
       />
     </div>
     <div className="form-group col-md-6">
-      <label htmlFor="inputPassword4">Feedback</label>
+      <label htmlFor="inputPassword4">Feedback</label> 
       <input
         type="text"
         className="form-control"

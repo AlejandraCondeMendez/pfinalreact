@@ -8,7 +8,6 @@ import ListaLibros from "../components/ListaLibros"
 import HamburgerMenu from "../components/HamburgerMenu"
 import { ContadorContxt } from "../components/Contador"
 import { useNavigate } from "react-router-dom"
-import Carrusel from "../components/Carrusel"
 
 
 const PagPrincipal = () => {

@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { getData } from "../services/fetch"
 import { muestraAlerta } from "../services/alertas"
 import HamburgerMenu from "../components/HamburgerMenu"
-
-
+import Navbar from "../components/Navbar"
 const InicioSesion = () => {
 
     const [datos, setDatos] = useState([]) //LO QUE VAMOS A GUARDAR ES UN ARREGLO DE USUARIOS
@@ -52,6 +51,8 @@ const InicioSesion = () => {
     return (
 
         <>
+        <Navbar/>
+        <HamburgerMenu/>
             <h1 className="titulo">Log in</h1>
       
             <div className="divInputs d-flex flex-column">

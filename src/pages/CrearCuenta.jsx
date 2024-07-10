@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { getData, postData } from "../services/fetch"
 import HamburgerMenu from "../components/HamburgerMenu"
 import { muestraAlerta } from "../services/alertas"
+import Navbar from "../components/Navbar"
 
 
 const CrearCuenta = () => { //useState en los imputs para poder obtener lo que esta escrito de una fomra actualizada (para tener el input de una forma actualizada cada vez que se escribe (alejandra23-cada letra se actualiza)
@@ -45,6 +46,8 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
 
     return (
         <>
+        <Navbar/>
+        <HamburgerMenu/>
             <h1 className="titulo">Sign in</h1>
             <div className="divInputs d-flex flex-column">
                 <span>Create an username</span>
