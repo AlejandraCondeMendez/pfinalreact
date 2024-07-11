@@ -87,10 +87,10 @@ const PagPrincipal = () => {
                 <p className="valorAmbos">{ambos}</p>
                 </div>
             <div className="cardPP d-flex flex-row gap-3 mt-5 w-100 flex-wrap">
-                {categoria === "" ? <ListaLibros  cardLibro={books} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""} {/*si general esta vacío mostrar todos los libros (books) mostrarC viene del cardBook y si esta en verdadero los botones se mostraran (borrar y editar)*/}
-                {categoria === "Libros en ingles" ? <ListaLibros cardLibro={ingles} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}} /> : ""}
-                {categoria === "Libros universitarios" ? <ListaLibros cardLibro={uni}  mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""}
-                {categoria === "General" ? <ListaLibros cardLibro={general} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""}
+                {categoria === "" ? <ListaLibros claseHover={"claseHover"} cardLibro={books} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""} {/*si general esta vacío mostrar todos los libros (books) mostrarC viene del cardBook y si esta en verdadero los botones se mostraran (borrar y editar)*/}
+                {categoria === "Libros en ingles" ? <ListaLibros claseHover={"claseHover"} cardLibro={ingles} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}} /> : ""}
+                {categoria === "Libros universitarios" ? <ListaLibros claseHover={"claseHover"} cardLibro={uni}  mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""}
+                {categoria === "General" ? <ListaLibros claseHover={"claseHover"} cardLibro={general} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""}
             </div>
             <InformGeneral/>
             

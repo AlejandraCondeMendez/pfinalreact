@@ -5,14 +5,15 @@
 import CardBook from "./CardBook"
 //listaLibros ya tiene la información de la API
     
-    const ListaLibros = ({cardLibro,btnEliminarL,mostrarBotones,mostrarC, btnEditarL, btnAgregarL, btnQuitarL, btnInfoL})=>{//estructura - conjunto de todas las cards
+    const ListaLibros = ({claseHover,cardLibro,btnEliminarL,mostrarBotones,mostrarC, btnEditarL, btnAgregarL, btnQuitarL, btnInfoL})=>{//estructura - conjunto de todas las cards
         
         
     return( 
         <>
            
-            {cardLibro.map((iterar)=>(
-                <CardBook
+            {cardLibro.map((iterar,index)=>(
+            <div key={index} className={claseHover}>
+              <CardBook
                 key={iterar.id} //toma el valor - accede a la propiedad de la API
                 titulo={iterar.titulo}
                 autor={iterar.autor}
@@ -37,6 +38,7 @@ import CardBook from "./CardBook"
                     )
                 }
                 />
+                </div>
             ))}
         </>
     )
