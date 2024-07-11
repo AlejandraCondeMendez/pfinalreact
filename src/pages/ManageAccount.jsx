@@ -15,13 +15,19 @@ const ManageAccount = () => { //CRUD
     const [modalShow, setModalShow] = useState(false);
     const [modalShowUpdate, setModalShowUpdate] = useState(false);
     
+    //contador de libros del usuario
+    const [librosUser, setLibrosUser] = useState(0)
+    
     const [actualizar, setActualizar] = useState(null)//edición del libro
     const [libros, setLibros] = useState([])//los libros del usuario
+
+   
 
     useEffect(()=>{
         const librosUser = async ()=>{
             const dataLibroUser = await getFilter("usuarioID", localStorage.getItem("localID")) //libros del usuario
             setLibros(dataLibroUser)
+            setLibrosUser(dataLibroUser.length)
         }
         librosUser()
     },[libros])
@@ -62,7 +68,7 @@ const ManageAccount = () => { //CRUD
                 <HamburgerMenu/>
             </div>
             <h1 className="titulo">My account</h1>
-            <p className="contadorCuenta">My books</p>
+            <p className="contadorCuenta">My books: {librosUser}</p>
 
             <Button className="botonCuenta" variant="primary" onClick={() => setModalShow(true)}>
                 Add a new book

@@ -204,12 +204,12 @@
       "id": "73c3",
       "titulo": "asdaa",
       "autor": "asda",
-      "usuarioID": null,
       "cantidad": "aaa",
-      "tipo": "",
-      "estado": "",
-      "subidopor": null,
-      "direccion": "aa"
+      "tipo": "Libros en ingles",
+      "estado": "Venta",
+      "direccion": "aa",
+      "usuarioID": null,
+      "subidopor": null
     }
   ],
   "comentarios": [
