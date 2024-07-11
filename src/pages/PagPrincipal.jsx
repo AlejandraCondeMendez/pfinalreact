@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar"
 import Opciones from "../components/Opciones"
-import InfoGeneral from "../components/InfoGeneral"
 import { useContext, useEffect, useState } from "react"
 import { getData, getFilter } from "../services/fetch"
 import ListaLibros from "../components/ListaLibros"
@@ -93,8 +92,8 @@ const PagPrincipal = () => {
                 {categoria === "Libros universitarios" ? <ListaLibros cardLibro={uni}  mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""}
                 {categoria === "General" ? <ListaLibros cardLibro={general} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""}
             </div>
-            <InfoGeneral />
             <InformGeneral/>
+            
         </>
     )
 }

@@ -65,7 +65,7 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
                     <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
                 </svg>}/>
                 <span>Email</span>
-                <Input tipo={"email"} nombre={"email"} refVali={correoReg} valor={correo} cambio={(e)=>setCorreo(e.target.value)} signo={<svg
+                <Input tipo={"email"} nombre={"email adress"} refVali={correoReg} valor={correo} cambio={(e)=>setCorreo(e.target.value)} signo={<svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"

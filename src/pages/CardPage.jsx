@@ -8,6 +8,8 @@ import { ContadorContxt } from "../components/Contador"
 import Carrusel from "../components/Carrusel" 
 import { getData } from "../services/fetch"
 import { useNavigate } from "react-router-dom"
+import FormCardPage from "../components/FormCardPage"
+import { muestraAlerta } from "../services/alertas"
 
 
 const CardPage=()=>{
@@ -52,6 +54,10 @@ const CardPage=()=>{
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[idLocal, userLibro])
    
+    const solicitarInfo =()=>{
+        muestraAlerta("Tu solicitud fue enviada", "success")
+    }
+
     return(
         <>
         <Navbar/>
@@ -62,7 +68,7 @@ const CardPage=()=>{
         </div>
         {/*que aparezcan los demás libros*/}
         <div className="formCardPage">
-            <FormCardPage/>
+        <FormCardPage number={infoLibro.numero} email={infoLibro.correo} evento={solicitarInfo}/>
         </div>
         <div className="carrusel">
         <Carrusel cardLibro={books} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage'),window.scrollTo({
