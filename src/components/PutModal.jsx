@@ -2,7 +2,7 @@
 import { Modal } from "react-bootstrap"
 import { useEffect, useRef, useState } from "react"
 import InputPP from "./InputPP"
-import Boton from "./Boton"
+import Button from "react-bootstrap"
 import Estado from "./Estado"
 import Opciones from "./Opciones"
 // eslint-disable-next-line no-unused-vars
@@ -66,7 +66,8 @@ const PutModal = ({ mostrar, ocultar, id, titulo, autor, cantidad, categoria, es
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Boton tipo={"button"} nombre={"Subir cambios"} evento={validarModal}/>
+          <Button nombre={"Subir cambios"} evento={validarModal}>Editar información</Button>
+          
         </Modal.Footer>
       </Modal>
     </>
