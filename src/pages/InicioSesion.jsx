@@ -54,7 +54,7 @@ const InicioSesion = () => {
         <HamburgerMenu/>
             <h1 className="titulo">Log in</h1>
       
-            <div className="divInputs d-flex flex-column">
+            <div className="divInputsInicio d-flex flex-column">
                 
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="libroIcon bi bi-book" viewBox="0 0 16 16">

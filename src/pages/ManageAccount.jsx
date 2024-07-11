@@ -89,7 +89,7 @@ const ManageAccount = () => { //CRUD
             btnEditarM={actualizarLibro}
             />
         }
-        <div className="cardPagPrin">
+        <div className="d-flex mx-auto flex-wrap mt-5 gap-3">
         {libros.length === 0 ? <p className="textoVacio">No hay libros</p> : <ListaLibros cardLibro={libros} btnEditarL={actualizarDatos} btnEliminarL={deleteLibro} mostrarBotones={true}/>}
         </div>
         </>

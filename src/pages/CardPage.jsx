@@ -8,19 +8,20 @@ import { ContadorContxt } from "../components/Contador"
 import Carrusel from "../components/Carrusel" 
 import { getData } from "../services/fetch"
 import { useNavigate } from "react-router-dom"
-import FormCardPage from "../components/FormCardPage"
 
 
 const CardPage=()=>{
     
+    const [userLibro, setUserLibro] = useState('')
+    const [infoLibro, setInfoLibro] = useState([])
     const [books, setBooks] = useState([])
     const navigate=useNavigate()
+    const idLocal = localStorage.getItem("libroLocal")
     
     useEffect(() => {//tiene dos momentos de ejecucion: cuando se carga la página (ejecute la página) y cada vez que sus dependencias cambien
         const traeLibros = async () => {
             const getBooks = await getData("libros", "")
             setBooks(getBooks) // setBooks contiene todos los libros que estan en la API 
-            console.log(getBooks);
         }
         traeLibros()
     }, [])//cada que categoría cambie se ejecuta el useEffect
@@ -34,14 +35,22 @@ const CardPage=()=>{
 
     //función para traer el liro guardado en el local (hecho en lista libro)
     const libroGet = async()=>{ //Se le agrega dependencias para que cada vez que el id del libro (guardado en el localStorage) cambie se cambie el libro del que se desea más información
-        const libroDatos = await getFilter("id", localStorage.getItem("libroLocal"))
+        const libroDatos = await getFilter("id", idLocal)
         setLibroInfo(libroDatos)
-
+        setUserLibro(libroDatos[0].usuarioID) /*el get filter trae el libro según su id (todas sus propiedades
+            setUserLibro accede a la propiedad de la API usuarioID para poder tener al dueño del libro*/
     }
-    const idLocal = localStorage.getItem("libroLocal")
+
+    const dueñoLibro = async()=>{
+        const datos = await getData("usuarios", userLibro)
+        setInfoLibro(datos)
+    }
+    
     useEffect(()=>{
         libroGet()
-    },[idLocal])
+        dueñoLibro()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[idLocal, userLibro])
    
     return(
         <>
@@ -53,7 +62,7 @@ const CardPage=()=>{
         </div>
         {/*que aparezcan los demás libros*/}
         <div className="formCardPage">
-        <FormCardPage/>
+            <FormCardPage/>
         </div>
         <div className="carrusel">
         <Carrusel cardLibro={books} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage'),window.scrollTo({
