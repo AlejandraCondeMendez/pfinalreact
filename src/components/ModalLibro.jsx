@@ -40,6 +40,12 @@ const ModalLibro = (props) => {
       subidopor: localStorage.getItem("localUser"),
       direccion: ubicaE
     }, "libros")} //obj y endpoint
+    setTitulo("")
+    setAutor("")
+    setDispo("")
+    setUbica("")
+    setEstado("")
+    setOpciones("")
   }
 
   //cada libro se agrega a la API

@@ -36,6 +36,10 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
             return
         } else {
             await postCuenta(cuenta, "usuarios")
+            setNombre("")
+            setContra("")
+            setNumero("")
+            setCorreo("")
         } //objeto y endpoint
     }
 

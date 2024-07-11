@@ -9,7 +9,7 @@ const Carrusel=({ cardLibro, btnEliminarL, mostrarBotones, mostrarC, btnEditarL,
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4, // número de cards que se mostrarán a la vez
+        slidesToShow: 3.5, // número de cards que se mostrarán a la vez
         slidesToScroll: 1,
         responsive: [
             {

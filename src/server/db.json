@@ -41,6 +41,13 @@
       "clave": "3434",
       "correo": "miguel25@gmail.com",
       "numero": "45672234"
+    },
+    {
+      "id": "fe34",
+      "nombre": "Paco el paco",
+      "clave": "1234",
+      "correo": "paquitopolicia@gmail.com",
+      "numero": "911"
     }
   ],
   "libros": [
@@ -175,6 +182,17 @@
       "estado": "Venta",
       "subidopor": "Miguel",
       "direccion": "Lindora, Santa Ana"
+    },
+    {
+      "id": "dc23",
+      "titulo": "El Ingeniero Hidalgo",
+      "autor": "Miguel De Cervantes",
+      "usuarioID": "fe34",
+      "cantidad": "2",
+      "tipo": "General",
+      "estado": "Venta",
+      "subidopor": "Paco el paco",
+      "direccion": "Heredia"
     }
   ]
 }

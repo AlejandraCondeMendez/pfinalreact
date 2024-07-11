@@ -2,7 +2,7 @@
 import { Modal } from "react-bootstrap"
 import { useEffect, useRef, useState } from "react"
 import InputPP from "./InputPP"
-import Button from "react-bootstrap"
+import {Button} from "react-bootstrap"
 import Estado from "./Estado"
 import Opciones from "./Opciones"
 // eslint-disable-next-line no-unused-vars
