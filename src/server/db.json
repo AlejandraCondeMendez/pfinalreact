@@ -1,0 +1,180 @@
+{
+  "usuarios": [
+    {
+      "id": "4108",
+      "nombre": "Nicolas",
+      "clave": "nico23",
+      "correo": "nicolas@gmail.com",
+      "numero": "84209727"
+    },
+    {
+      "id": "a6f6",
+      "nombre": "Alejandra",
+      "clave": "1234",
+      "correo": "alejandra@gmail.com",
+      "numero": "86764534"
+    },
+    {
+      "id": "81df",
+      "nombre": "Luis",
+      "clave": "abcd",
+      "correo": "luis25@gmail.com",
+      "numero": "87342992"
+    },
+    {
+      "id": "c0d8",
+      "nombre": "Alexia",
+      "clave": "asdf",
+      "correo": "alexiap@gmail.com",
+      "numero": "87222276"
+    },
+    {
+      "id": "a100",
+      "nombre": "Janeth",
+      "clave": "1212",
+      "correo": "janeth@gmail.com",
+      "numero": "67895422"
+    },
+    {
+      "id": "5ce6",
+      "nombre": "Miguel",
+      "clave": "3434",
+      "correo": "miguel25@gmail.com",
+      "numero": "45672234"
+    }
+  ],
+  "libros": [
+    {
+      "id": "5a56",
+      "titulo": "Los juegos del hambre",
+      "autor": "Suzanne Collins",
+      "usuarioID": "4108",
+      "cantidad": "1",
+      "tipo": "Libros en ingles",
+      "estado": "Ambos",
+      "subidopor": "Nicolas",
+      "direccion": "San José"
+    },
+    {
+      "id": "3abd",
+      "titulo": "Harry Potter y la piedra filosofal",
+      "autor": "J. K. Rowling",
+      "cantidad": "1",
+      "tipo": "General",
+      "estado": "Venta",
+      "direccion": "Santa Ana",
+      "usuarioID": "c0d8",
+      "subidopor": "Alexia"
+    },
+    {
+      "id": "2525",
+      "titulo": "Percy Jackson: el ladrón del rayo",
+      "autor": "Rick Riordan",
+      "cantidad": "1",
+      "tipo": "General",
+      "estado": "Intercambio",
+      "direccion": "Santa Ana",
+      "usuarioID": "c0d8",
+      "subidopor": "Alexia"
+    },
+    {
+      "id": "2566",
+      "titulo": "El diario de Ana Frank",
+      "autor": "Traducido por Mónica Lombardo",
+      "usuarioID": "c0d8",
+      "cantidad": "1",
+      "tipo": "General",
+      "estado": "Ambos",
+      "subidopor": "Alexia",
+      "direccion": "Santa Ana"
+    },
+    {
+      "id": "b7f5",
+      "titulo": "Ana la de tejas verdes",
+      "autor": "Lucy Maud Montgomery",
+      "usuarioID": "c0d8",
+      "cantidad": "1",
+      "tipo": "General",
+      "estado": "Intercambio",
+      "subidopor": "Alexia",
+      "direccion": "Santa Ana"
+    },
+    {
+      "id": "ee47",
+      "titulo": "Conversación en la catedral",
+      "autor": "Mario Vargas Llosa",
+      "usuarioID": "a6f6",
+      "cantidad": "1",
+      "tipo": "General",
+      "estado": "Intercambio",
+      "subidopor": "Alejandra",
+      "direccion": "Escazú"
+    },
+    {
+      "id": "5c3e",
+      "titulo": "¿Quién mató a palomino Morelo?",
+      "autor": "Mario Vargas Llosa",
+      "usuarioID": "a6f6",
+      "cantidad": "1",
+      "tipo": "General",
+      "estado": "Ambos",
+      "subidopor": "Alejandra",
+      "direccion": "Escazú"
+    },
+    {
+      "id": "f634",
+      "titulo": "El amor en los tiempos del cólera",
+      "autor": "Gabriel García Marquez",
+      "usuarioID": "a100",
+      "cantidad": "1",
+      "tipo": "",
+      "estado": "Venta",
+      "subidopor": "Janeth",
+      "direccion": "Desamparados"
+    },
+    {
+      "id": "0eee",
+      "titulo": "The baby-sitters club",
+      "autor": "Ann M. Martin",
+      "usuarioID": "a100",
+      "cantidad": "1",
+      "tipo": "Libros en ingles",
+      "estado": "Venta",
+      "subidopor": "Janeth",
+      "direccion": "Desamparados"
+    },
+    {
+      "id": "2b71",
+      "titulo": "Too all the boys P.S I still love you",
+      "autor": "Jenny Han",
+      "cantidad": "1",
+      "tipo": "Libros en ingles",
+      "estado": "Intercambio",
+      "direccion": "Desamparados",
+      "usuarioID": "a100",
+      "subidopor": "Janeth"
+    },
+    {
+      "id": "7219",
+      "titulo": "El hombre en busca de sentido",
+      "autor": "Viktor Frankl",
+      "usuarioID": "5ce6",
+      "cantidad": "1",
+      "tipo": "Libros universitarios",
+      "estado": "Intercambio",
+      "subidopor": "Miguel",
+      "direccion": "Lindora, Santa Ana"
+    },
+    {
+      "id": "7a47",
+      "titulo": "Pensar rápido, pensar despacio",
+      "autor": "Daniel Kahneman",
+      "usuarioID": "5ce6",
+      "cantidad": "1",
+      "tipo": "Libros universitarios",
+      "estado": "Venta",
+      "subidopor": "Miguel",
+      "direccion": "Lindora, Santa Ana"
+    }
+  ]
+}
