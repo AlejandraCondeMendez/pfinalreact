@@ -1,6 +1,7 @@
 const Formulario=()=>{
     return(
         <>
+        <div className="formularioAcerca">
         <form>
   <div className="form-row">
     <div className="form-group col-md-6">
@@ -26,6 +27,7 @@ const Formulario=()=>{
     Send
   </button>
 </form>
+</div>
         </>
     )
 }

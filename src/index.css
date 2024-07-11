@@ -1,16 +1,14 @@
-
-.divInputs{
+.divInputs {
     padding: 50px 30px;
     max-width: 330px;
-    height: 380px;
+    height: 550px;
     gap: 20px;
     border: 1px solid black;
     border-radius: 10px;
     margin-top: 30px;
     margin-left: 465px;
 }
-
-.botoncito{
+.botoncito {
     width: 100px;
     padding: 10px;
     border: none;
@@ -19,7 +17,7 @@
     margin-left: 90px;
 }
 
-.botoncito2{
+.botoncito2 {
     width: 100px;
     padding: 10px;
     border: none;
@@ -28,56 +26,96 @@
     margin-left: 90px;
 }
 
-.titulo{
+.titulo {
     text-align: center;
     margin-top: 40px;
 }
-.textcreate{
+
+.textcreate {
     margin-top: 20px;
     margin-left: 68px;
 }
-.textcreate2{
+
+.textcreate2 {
     margin-left: 115px;
 }
 
-.libroIcon{
+.libroIcon {
     margin-top: 3px;
     margin-left: 110px;
 }
-.cart{
-    margin-left: 950px;
+
+.cart {
+    margin-left: 940px;
 }
-.opciones{
-    margin-top: 20px;
+
+.opciones {
+    margin-top: 40px;
     margin-bottom: 35px;
     margin-left: 480px;
     padding: 10px;
     border-radius: 10px;
 }
-.divContador{
-    display: flex; 
-    gap: 20px;    
-    
+
+.contaDispo {
+    margin-top: 45px;
+    margin-left: 150px;
+    font-size: 18px;
 }
-.pTitulo{
+
+.contaInter {
+    position: absolute;
+    margin-left: 520px;
+    margin-top: -145px;
+    font-size: 18px;
+}
+
+.contaAmbos {
+    margin-left: 840px;
+    margin-top: -145px;
+    font-size: 18px;
+}
+
+.valorVenta {
+    font-size: 40px;
+    margin-left: 70px;
+}
+
+.valorInter {
+    font-size: 40px;
+    margin-left: 70px;
+   
+}
+
+.valorAmbos {
+    font-size: 40px;
+    margin-left: 100px;
+}
+
+.pTitulo {
     display: flex;
 }
-.botonCuenta{
+
+.botonCuenta {
     margin-top: 30px;
     margin-left: 180px;
 }
-.contadorCuenta{
+
+.contadorCuenta {
     position: absolute;
     font-size: 25px;
     margin-top: 30px;
     margin-left: 860px;
 }
-.carritoCont{
+
+.carritoCont {
     position: absolute;
-    margin-top: -8px;
-    margin-left: 990px;
+    margin-top: -5px;
+    margin-left: 975px;
+
 }
-.btnCart{
+
+.btnCart {
     display: flex;
     margin-bottom: 10px;
     background-color: #FF9B42;
@@ -87,15 +125,18 @@
     border: none;
     border-radius: 9px;
 }
-.btnCart:hover{
-    background-color:#fa7821eb;
+
+.btnCart:hover {
+    background-color: #fa7821eb;
 }
-.btnInfo{
+
+.btnInfo {
     width: 250px;
     text-align: center;
     justify-content: center;
 }
-.btnRemove{
+
+.btnRemove {
     border: none;
     border-radius: 9px;
     width: 100px;
@@ -103,25 +144,197 @@
     position: absolute;
     margin-left: 150px;
 }
-.btnRemove:hover{
-    background-color: #66d7d1cf ;
+
+.btnRemove:hover {
+    background-color: #66d7d1cf;
 }
-.cardPage{
-    margin-top: 50px;
-    margin-left: 180px;
+
+.cardPage {
+    position:relative;
+    margin-top: 60px;
+    margin-left: 150px;
+    
 }
-.formCardPage{
+.formCardPage {
     position: absolute;
-    margin-left: 600px;
+    margin-left: 620px;
     margin-top: -650px;
 }
-.inputCardPag{
+
+.inputCardPag {
     width: 400px;
 }
-.carrusel{
-    margin-top: 35px;
+
+.carrusel {
+    margin-top: 45px;
 }
-.cardPagPrin{
+
+.cardPagPrin {
     margin-top: 35px;
     margin-left: 40px;
+}
+
+.logo {
+    width: 250px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.card{
+    margin-left: 60px;
+    padding: 6px;
+    
+}
+
+.textoVacio{
+    font-size: 20px;
+    margin-top: 140px;
+    margin-left: 480px;
+}
+.subAcercaA{
+    margin-top: 30px;
+    margin-left: 100px;
+    color: #324A5F;
+    font-size: 40px;
+}
+.subAcercaB{
+    margin-top: 100px;
+    margin-left: 930px;
+    color: #324A5F;
+    font-size: 40px;
+}
+.subAcercaC{
+    margin-top: 100px;
+    margin-left: 100px;
+    color: #324A5F;
+    font-size: 40px;
+}
+.divAcercaA{
+    margin-top: 40px;
+    margin-left: 100px;
+    max-width: 900px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+.divAcercaB{
+    margin-top: 40px;
+    margin-left: 215px;
+    max-width: 860px;
+    height: 180px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+.divAcercaC{
+    margin-top: 40px;
+    margin-left: 100px;
+    max-width: 900px;
+    height: 180px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+
+}
+hr {
+    border: none;
+    height: 3px; /* Esto define el grosor de la línea */
+    background-color: #000; /* Esto define el color de la línea */
+    width: 300px;
+    position: absolute;
+    margin-top: 115px;
+    margin-left: 580px;
+    background-color: #BF1363;
+}
+.subValores{
+    margin-top: 100px;
+    text-align: center;
+    color: #324A5F;
+    font-size: 40px;
+}
+.linea{
+    border: none;
+    height: 3px; 
+    background-color: #000; /* Esto define el color de la línea */
+    width: 300px;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 300px;
+    background-color: #BF1363;
+}
+.divValores{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    list-style: none;
+}
+.acceso{
+    margin-left: 130px;
+    color: #3FA7D6;
+}
+.calidad{
+    position: absolute;
+    margin-top: -226px;
+    margin-left: 535px;
+    color: #FAC05E;
+}
+.comu{
+    position: absolute;
+    margin-top: -226px;
+    margin-left: 880px;
+    color: #59CD90;
+}
+.sostenible{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 900px;
+    color: #EE6352;
+}
+.divAcceso{
+    margin-top: 10px;
+    margin-left: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+}
+.divCalidad{
+    position: absolute;
+    margin-top: -190px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    margin-left: 430px;
+}
+.divComu{
+    position: absolute;
+    margin-top: -190px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    margin-left: 800px;
+}
+
+.formularioAcerca{
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-bottom: 300px;
+}
+.comentarios{
+    color: #324A5F;
+    font-size: 40px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.cardPP{
+    margin-bottom: 100px;
 }

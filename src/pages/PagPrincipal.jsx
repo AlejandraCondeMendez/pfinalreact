@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar"
 import Opciones from "../components/Opciones"
-import InputPP from "../components/InputPP"
 import InfoGeneral from "../components/InfoGeneral"
 import { useContext, useEffect, useState } from "react"
 import { getData, getFilter } from "../services/fetch"
@@ -8,7 +7,7 @@ import ListaLibros from "../components/ListaLibros"
 import HamburgerMenu from "../components/HamburgerMenu"
 import { ContadorContxt } from "../components/Contador"
 import { useNavigate } from "react-router-dom"
-
+import InformGeneral from "../components/InformGeneral"
 
 const PagPrincipal = () => {
     
@@ -65,32 +64,37 @@ const PagPrincipal = () => {
 
     return (
         <>
+                 
             <Navbar/>
             <div className="hamburgerMover">
                 <HamburgerMenu />
             </div>
-            <h1 className="text-center">¡Welcome! {localStorage.getItem("localUser")} <br /> Start to read now</h1> {/*si hay un usuario iniciado muestra el welcome con ese nombre sino solo muestra Welcome*/}
+            <h2 className="text-center"><strong>LibertyBook</strong></h2> <br />
+            <h1 className="text-center">¡Bienvenido! {localStorage.getItem("localUser")} <br /> Empieza a leer ahora</h1> {/*si hay un usuario iniciado muestra el welcome con ese nombre sino solo muestra Welcome*/}
             
             <div className="filtroOpciones">
             <Opciones clase={"opciones"} evento={(e)=>setCategoria(e.target.value)} titulo={"Categorías de la biblioteca"} />
             </div>
-            <div className="divContador">
-                <div className="pTitulo">
-                <p className="inputLibro">Libros disponibles para venta</p>
-                <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={venta} />
+                <div className="contaDispo">
+                <p className="inputLibro">Libros disponibles <br /> para venta</p>
+                <p className="valorVenta">{venta}</p>     
                 </div>
-                <p className="inputLibro">Libros disponibles para intercambio</p>
-                <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={intercambio} />
-                <p className="inputLibro">Libros disponibles en ambas opciones</p>
-                <InputPP clase={"contadorIn input-circular"} tipo={"number"} valor={ambos} />
-            </div>
-            <div className="d-flex flex-row gap-3 mt-5 w-100 flex-wrap">
+                <div className="contaInter">
+                <p className="inputLibro">Libros disponibles <br /> para intercambio</p>
+                <p className="valorInter">{intercambio}</p>
+                </div>
+                <div className="contaAmbos">
+                <p className="inputLibro">Libros disponibles en <br /> ambas opciones</p>
+                <p className="valorAmbos">{ambos}</p>
+                </div>
+            <div className="cardPP d-flex flex-row gap-3 mt-5 w-100 flex-wrap">
                 {categoria === "" ? <ListaLibros  cardLibro={books} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""} {/*si general esta vacío mostrar todos los libros (books) mostrarC viene del cardBook y si esta en verdadero los botones se mostraran (borrar y editar)*/}
-                {categoria === "Libros en ingles" ? <ListaLibros cardLibro={ingles} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye}  /> : ""}
-                {categoria === "Libros universitarios" ? <ListaLibros cardLibro={uni}  mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye}/> : ""}
-                {categoria === "General" ? <ListaLibros cardLibro={general} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} /> : ""}
+                {categoria === "Libros en ingles" ? <ListaLibros cardLibro={ingles} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}} /> : ""}
+                {categoria === "Libros universitarios" ? <ListaLibros cardLibro={uni}  mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""}
+                {categoria === "General" ? <ListaLibros cardLibro={general} mostrarC={true} btnAgregarL={aumenta} btnQuitarL={disminuye} btnInfoL={()=>{navigate('/cardpage')}}/> : ""}
             </div>
             <InfoGeneral />
+            <InformGeneral/>
         </>
     )
 }

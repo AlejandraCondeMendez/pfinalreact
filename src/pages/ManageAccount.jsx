@@ -67,11 +67,11 @@ const ManageAccount = () => { //CRUD
             <div className="hamburgerMover">
                 <HamburgerMenu/>
             </div>
-            <h1 className="titulo">My account</h1>
-            <p className="contadorCuenta">My books: {librosUser}</p>
+            <h1 className="titulo">Mi cuenta</h1>
+            <p className="contadorCuenta">Mis libros: {librosUser}</p>
 
             <Button className="botonCuenta" variant="primary" onClick={() => setModalShow(true)}>
-                Add a new book
+                Agrega un nuevo libro
             </Button>
 
             <ModalLibro show={modalShow} onHide={() => setModalShow(false)}/>
@@ -90,7 +90,7 @@ const ManageAccount = () => { //CRUD
             />
         }
         <div className="cardPagPrin">
-        <ListaLibros cardLibro={libros} btnEditarL={actualizarDatos} btnEliminarL={deleteLibro} mostrarBotones={true}/>
+        {libros.length === 0 ? <p className="textoVacio">No hay libros</p> : <ListaLibros cardLibro={libros} btnEditarL={actualizarDatos} btnEliminarL={deleteLibro} mostrarBotones={true}/>}
         </div>
         </>
     )

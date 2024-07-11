@@ -27,8 +27,8 @@ const HamburgerMenu = () => {
         <div className="bar3"></div>
       </div>
       <div className={`menu-content ${isOpen ? 'show' : ''}`}>
-        <a className='text-nowrap' onClick={navegar} >About us</a>
-        <a className='text-nowrap' onClick={()=>{navigate('/micuenta')}}>My account</a>
+        <a className='text-nowrap' onClick={()=>{navigate('/micuenta')}} >Mi cuenta</a>
+        <a className='text-nowrap' onClick={navegar}>Acerca de nosotros</a>
       </div>
     </div>
     </>

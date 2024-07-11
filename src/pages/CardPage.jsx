@@ -47,7 +47,7 @@ const CardPage=()=>{
         <>
         <Navbar/>
         <HamburgerMenu/>
-        <h1 className="titulo">Book information</h1>
+        <h1 className="titulo">Información del libro</h1>
         <div className="cardPage">
         <ListaLibros cardLibro={libroInfo} mostrarC={true} btnInfoL={libroGet} btnAgregarL={aumenta} btnQuitarL={disminuye}/>
         </div>
@@ -61,8 +61,8 @@ const CardPage=()=>{
             behavior: 'smooth'
         })}} />
         </div>
-        <p>Reviews</p>
         </>
+
     )
 }
 export default CardPage

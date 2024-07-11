@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 
 const FormCardPage=()=>{
@@ -42,7 +43,7 @@ const FormCardPage=()=>{
           disabled=""
         />
         <label className="form-check-label" htmlFor="disabledFieldsetCheck">
-         check this
+         I'm not a robot
         </label>
       </div>
     </div>

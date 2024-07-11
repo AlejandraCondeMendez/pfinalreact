@@ -3,25 +3,25 @@
     {
       "id": "0",
       "nombre": "Pepe",
-      "correo": "asdads@gamil.com",
+      "correo": "pepe@gmail.com",
       "clave": "abcd",
-      "numero": "123123",
+      "numero": "123456",
       "ubicacion": "sasas"
     },
     {
       "id": "d120",
       "nombre": "Alejandra",
-      "correo": "asdads@gamil.com",
+      "correo": "ale@gmail.com",
       "clave": "abcd",
-      "numero": "123123",
+      "numero": "7891011",
       "ubicacion": "sasas"
     },
     {
       "id": "d283",
       "nombre": "Jeanca",
-      "correo": "asdads@gamil.com",
+      "correo": "jeanca@gmial.com",
       "clave": "abcd",
-      "numero": "123123",
+      "numero": "121314",
       "ubicacion": "sasas"
     },
     {
@@ -65,70 +65,14 @@
       "ubicacion": "sasas"
     },
     {
-      "id": "a06a",
-      "nombre": "angie23",
-      "clave": "123"
-    },
-    {
-      "id": "16ea",
-      "nombre": "Andres",
-      "clave": "1234"
-    },
-    {
-      "id": "406c",
-      "nombre": "   ",
-      "clave": "    "
-    },
-    {
-      "id": "b091",
-      "nombre": "Dayana",
-      "clave": "123"
-    },
-    {
-      "id": "f906",
-      "nombre": "Dayana23",
-      "clave": "123"
-    },
-    {
-      "id": "c7de",
-      "nombre": "Wendy",
-      "clave": "111"
+      "id": "4108",
+      "nombre": "Nicolas",
+      "clave": "nico23",
+      "correo": "nicolas@gmail.com",
+      "numero": "84209727"
     }
   ],
   "libros": [
-    {
-      "id": "f88f",
-      "titulo": "LALA",
-      "autor": "LOLO",
-      "usuarioID": "93c8",
-      "cantidad": "LIDSA",
-      "tipo": "General",
-      "estado": "Venta",
-      "subidopor": "angie23",
-      "direccion": "DASD"
-    },
-    {
-      "id": "27d2",
-      "titulo": "LALA",
-      "autor": "LOLO",
-      "usuarioID": "93c8",
-      "cantidad": "LIDSA",
-      "tipo": "Libros en ingles",
-      "estado": "Venta",
-      "subidopor": "angie23",
-      "direccion": "DASD"
-    },
-    {
-      "id": "0bc0",
-      "titulo": "LALA",
-      "autor": "LOLO",
-      "usuarioID": "93c8",
-      "cantidad": "LIDSA",
-      "tipo": "Libros universitarios",
-      "estado": "Venta",
-      "subidopor": "angie23",
-      "direccion": "DASD"
-    },
     {
       "id": "ac93",
       "titulo": "PRIN",
@@ -174,50 +118,26 @@
       "direccion": "ASD"
     },
     {
-      "id": "725d",
-      "titulo": "DD",
-      "autor": "VAASDASDA",
-      "cantidad": "A",
-      "direccion": "FUNCIONAR",
-      "usuarioID": "0",
-      "subidopor": "Pepe"
-    },
-    {
-      "id": "d821",
-      "titulo": "Libros",
-      "autor": "des",
-      "cantidad": "Pruebass",
-      "direccion": "Mi casas",
-      "usuarioID": "0",
-      "subidopor": "Pepe"
-    },
-    {
-      "id": "5315",
-      "titulo": "A",
-      "autor": "A",
-      "cantidad": "A",
-      "direccion": "A",
-      "usuarioID": "a06a",
-      "subidopor": "angie23"
-    },
-    {
-      "id": "73c3",
-      "titulo": "asdaa",
-      "autor": "asda",
-      "cantidad": "aaa",
+      "id": "9bd9",
+      "titulo": "La sombra del viento",
+      "autor": "Carlos Ruiz Zafon",
+      "cantidad": "1",
       "tipo": "Libros en ingles",
-      "estado": "Venta",
-      "direccion": "aa",
-      "usuarioID": null,
-      "subidopor": null
-    }
-  ],
-  "comentarios": [
+      "estado": "Intercambio",
+      "direccion": "Santa Ana",
+      "usuarioID": "0",
+      "subidopor": "Pepe"
+    },
     {
-      "idLibro": "0",
-      "idUsuario": "Asd",
-      "descripcion": "asdasd",
-      "id": "e165"
+      "id": "5a56",
+      "titulo": "Los juegos del hambre",
+      "autor": "Suzanne Collins",
+      "usuarioID": "4108",
+      "cantidad": "1",
+      "tipo": "Libros en ingles",
+      "estado": "Ambos",
+      "subidopor": "Nicolas",
+      "direccion": "San José"
     }
   ]
 }

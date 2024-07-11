@@ -62,11 +62,7 @@
 }
 
 
-.input-circular{
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-}
+
 .colored-toast.swal2-icon-success {
   background-color: #a5dc86 !important;
 }
@@ -103,4 +99,6 @@
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-style: normal;
+  
+
 }

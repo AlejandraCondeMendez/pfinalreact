@@ -9,7 +9,7 @@ const CardBook = ({mostrar, mostrarC, titulo, autor, cantidad, categoria, estado
  
 
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card" style={{ width: "20rem" }}>
       <h5 className="card-title">Libro: {titulo}</h5>{/*propiedad*/}
       <p className="text-muted">Usuario: {subidopor}</p>{/*propiedad*/}
       <img src={imagen} className="card-img-top" alt="..." />{/*propiedad*/}
