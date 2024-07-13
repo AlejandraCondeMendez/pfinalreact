@@ -43,11 +43,18 @@
       "numero": "45672234"
     },
     {
-      "id": "fe34",
-      "nombre": "Paco el paco",
-      "clave": "1234",
-      "correo": "paquitopolicia@gmail.com",
-      "numero": "911"
+      "id": "a898",
+      "nombre": "Jose",
+      "clave": "1212",
+      "correo": "jose@gmail.com",
+      "numero": "87653434"
+    },
+    {
+      "id": "9c2a",
+      "nombre": "Carlos23",
+      "clave": "1212",
+      "correo": "carlos@gmail.com",
+      "numero": "23342323"
     }
   ],
   "libros": [
@@ -140,28 +147,6 @@
       "direccion": "Desamparados"
     },
     {
-      "id": "0eee",
-      "titulo": "The baby-sitters club",
-      "autor": "Ann M. Martin",
-      "usuarioID": "a100",
-      "cantidad": "1",
-      "tipo": "Libros en ingles",
-      "estado": "Venta",
-      "subidopor": "Janeth",
-      "direccion": "Desamparados"
-    },
-    {
-      "id": "2b71",
-      "titulo": "Too all the boys P.S I still love you",
-      "autor": "Jenny Han",
-      "cantidad": "1",
-      "tipo": "Libros en ingles",
-      "estado": "Intercambio",
-      "direccion": "Desamparados",
-      "usuarioID": "a100",
-      "subidopor": "Janeth"
-    },
-    {
       "id": "7219",
       "titulo": "El hombre en busca de sentido",
       "autor": "Viktor Frankl",
@@ -184,15 +169,26 @@
       "direccion": "Lindora, Santa Ana"
     },
     {
-      "id": "dc23",
-      "titulo": "El Ingeniero Hidalgo",
-      "autor": "Miguel De Cervantes",
-      "usuarioID": "fe34",
-      "cantidad": "2",
+      "id": "b04d",
+      "titulo": "El perfume",
+      "autor": "Patrick Suskind",
+      "usuarioID": "a898",
+      "cantidad": "1",
       "tipo": "General",
-      "estado": "Venta",
-      "subidopor": "Paco el paco",
-      "direccion": "Heredia"
+      "estado": "Intercambio",
+      "subidopor": "Jose",
+      "direccion": "Santa Ana"
+    },
+    {
+      "id": "4aec",
+      "titulo": "El perfume ",
+      "autor": "Patrik Suskind",
+      "cantidad": "1",
+      "tipo": "Libros universitarios",
+      "estado": "Ambos",
+      "direccion": "Santa Ana",
+      "usuarioID": "9c2a",
+      "subidopor": "Carlos23"
     }
   ]
 }

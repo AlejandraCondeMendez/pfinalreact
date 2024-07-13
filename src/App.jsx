@@ -9,8 +9,8 @@ function App() {
 
   return (
     <>
-    
-    <BrowserRouter>
+    {/*React router dom*/}
+    <BrowserRouter> 
     <ContadorProvider>
     <PageRoutes/>
     </ContadorProvider>

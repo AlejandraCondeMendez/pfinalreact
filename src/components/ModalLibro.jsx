@@ -5,6 +5,7 @@ import Opciones from './Opciones';
 import Estado from './Estado';
 import { postData } from '../services/fetch';
 import { useRef, useState } from 'react';
+import { muestraAlerta } from '../services/alertas';
 
 const ModalLibro = (props) => {
 
@@ -28,7 +29,7 @@ const ModalLibro = (props) => {
     let ubicacion = ubicacionR.current.value.trim();
     
     if (!titulo || !autor || !disponible || !ubicacion) {
-      alert("Por favor llene todos los campos")
+      muestraAlerta("Por favor llene todos los campos", "error")
       return
     } else { await agregarLibro({
       titulo: tituloE, //titulo viene de la API - titulo viene del estado
@@ -77,7 +78,7 @@ const ModalLibro = (props) => {
                 console.log(estadoE)
               }
                 }/>
-              <Opciones clase={"text-center d-flex justify-content-center mx-auto mb-3 p-1"} evento={(e)=>{setOpciones(e.target.value)}}  titulo={"Categorías"}/>
+              <Opciones clase={"text-center d-flex justify-content-center mx-auto mb-3 p-1"} evento={(e)=>{setOpciones(e.target.value)}} titulo={"Categorías"}/>
               <InputPP tipo={"text"} nombre={"Ubicación"} clase={"w-25 mb-3 p-1"} refVali={ubicacionR} valor={ubicaE} cambio={(e)=>setUbica(e.target.value)}/>
             </div>
           </Modal.Body>

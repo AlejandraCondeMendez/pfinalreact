@@ -2,9 +2,10 @@
 import { Modal } from "react-bootstrap"
 import { useEffect, useRef, useState } from "react"
 import InputPP from "./InputPP"
-import {Button} from "react-bootstrap"
+import Boton from "./Boton"
 import Estado from "./Estado"
 import Opciones from "./Opciones"
+import { muestraAlerta } from "../services/alertas"
 // eslint-disable-next-line no-unused-vars
 
 const PutModal = ({ mostrar, ocultar, id, titulo, autor, cantidad, categoria, estado, ubicacion, btnEditarM}) => {
@@ -39,7 +40,7 @@ const PutModal = ({ mostrar, ocultar, id, titulo, autor, cantidad, categoria, es
     const ubica = ubicaR.current.value.trim('')
 
     if (!titulo || !autor || !cantidad || !ubica) {
-      alert ("Por favor llene los campos")      
+      muestraAlerta("Por favor llene todos los campos", "error")     
       return
     } else{
       btnEditarM(id, tituloE, autorE, cantidadE, ubicaE,estadoE,cateE)
@@ -66,7 +67,7 @@ const PutModal = ({ mostrar, ocultar, id, titulo, autor, cantidad, categoria, es
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button nombre={"Subir cambios"} evento={validarModal}>Editar información</Button>
+          <Boton nombre={"Subir cambios"} evento={validarModal}>Editar información</Boton>
           
         </Modal.Footer>
       </Modal>

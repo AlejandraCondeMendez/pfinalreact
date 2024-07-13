@@ -20,7 +20,11 @@ const CrearCuenta = () => { //useState en los imputs para poder obtener lo que e
     const numReg = useRef('')
 
     const validarInputR = async () => {
-        if (!userReg.current.value || !passReg.current.value || !correoReg.current.value || !numReg.current.value) {
+        const userTrim=userReg.current.value.trim()
+        const passTrim=userReg.current.value.trim()
+        const correoTrim=userReg.current.value.trim()
+        const numTrim=numReg.current.value.trim()
+        if (!userTrim || !passTrim || !correoTrim || !numTrim) {
             muestraAlerta("Por favor llene los campos vacíos", "error")
             return
         }
